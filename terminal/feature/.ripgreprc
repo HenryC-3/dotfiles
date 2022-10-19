@@ -1,0 +1,4 @@
+# ignore
+--glob
+!git/*
+!node_modules/*

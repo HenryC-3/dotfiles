@@ -1,0 +1,38 @@
+# set clean/link/shell default options
+# https://github.com/anishathalye/dotbot#clean
+- defaults:
+      link:
+          relink: true
+# remove symlinks in target directory that not point to current directory
+# 👀 not recursively
+# full options https://github.com/anishathalye/dotbot#clean
+- clean:
+      ~/:
+      ~/.config:
+          recursive: true
+
+# create symlink in target directory
+# full options https://github.com/anishathalye/dotbot#link
+- link:
+      ~/.config/nvim: ./editor/nvim
+      ~/.config/alacritty: ./terminal/emulator/alacritty
+      ~/.config/skhd: ./window manager/skhd
+      ~/.config/karabiner: ./window manager/karabiner
+      ~/.yabairc: ./window manager/.yabairc
+      ~/.fzf.zsh: ./terminal/feature/.fzf.zsh
+      ~/.p10k.zsh: ./terminal/theme/.p10k.zsh
+      ~/.zshrc: ./terminal/shell/.zshrc
+      ~/.ripgreprc: ./terminal/feature/.ripgreprc
+      ~/.npmrc: ./lang/javascript/.npmrc
+      ~/.yarnrc: ./lang/javascript/.yarnrc
+      ~/.gitconfig: ./git/.gitconfig
+# create folder
+# full options https://github.com/anishathalye/dotbot#create
+- create:
+      - ~/downloads
+      - ~/.vim/undo-history
+
+# run shell command when run ./install
+# full options https://github.com/anishathalye/dotbot#shell
+- shell:
+      - [git submodule update --init --recursive, Installing submodules] #
