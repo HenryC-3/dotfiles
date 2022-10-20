@@ -47,7 +47,11 @@ This repo contains serval dotfiles on my personal Macbook.
 
 ### backup
 
-Normal git commit push workflow
+```bash
+git add <files>
+
+git-cz # or regular commit
+```
 
 ### retrieve dotfiles on new machine
 
