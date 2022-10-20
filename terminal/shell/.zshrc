@@ -46,7 +46,7 @@ fi
 # update the volta toolchain when run volta command. # this is a temporary solution for https://github.com/volta-cli/volta/projects/7#card-39881731
 vol() {
   volta "$@"
-  volta list --format=plain > "${ICLOUD_HOME}/Volta/toolchain.txt"
+  volta list --format=plain > "${ICLOUD_HOME}/Volta/.volta"
 }
 
 source $ZSH/oh-my-zsh.sh
