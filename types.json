@@ -1,0 +1,36 @@
+{
+    "types": [
+        {
+            "name": "dotfiles: Add, remove, modify a dotfile",
+            "value": "dotfiles"
+        },
+        {
+            "name": "feat: A new feature",
+            "value": "feat"
+        },
+        {
+            "name": "fix: A bug fix",
+            "value": "fix"
+        },
+        {
+            "name": "docs: Documentation only changes",
+            "value": "docs"
+        },
+        {
+            "name": "refactor: Changes the folder structure",
+            "value": "refactor"
+        },
+        {
+            "name": "dotbot: Changes that affect the dotbot",
+            "value": "dotbot"
+        },
+        {
+            "name": "chore: Changes like update workspaces settings or styles",
+            "value": "chore"
+        },
+        {
+            "name": "revert: Reverts a previous commit",
+            "value": "revert"
+        }
+    ]
+}
