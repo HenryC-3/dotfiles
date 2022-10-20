@@ -26,6 +26,7 @@
       ~/.npmrc: ./lang/javascript/.npmrc
       ~/.yarnrc: ./lang/javascript/.yarnrc
       ~/.gitconfig: ./git/.gitconfig
+      ~/.czrc: ./git/.czrc
 # create folder
 # full options https://github.com/anishathalye/dotbot#create
 - create:
