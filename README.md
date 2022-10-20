@@ -51,7 +51,7 @@ Normal git commit push workflow
 
 ### retrieve dotfiles on new machine
 
-1.  Setup
+1.  Setup python and git environment, then do
 
     ```bash
     git clone https://github.com/HenryC-3/dotfiles.git

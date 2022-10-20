@@ -8,18 +8,24 @@ Homebrew-file created a wrapper on homebrew, checkout in [.zshrc](terminal/shell
 
 ## Workflow
 
--   Create `Brewfile` in icloud which contains all the apps and packages installed on current Mac
+> icloud must be setup before you start
+
+### Init
+
+Create `Brewfile` in icloud which contains all the apps and packages installed on current Mac
 
     ```bash
     brew tap Homebrew/bundle
     brew bundle dump --file=/Users/henry/Library/Mobile\ Documents/com~apple~CloudDocs/Homebrew/Brewfile --force
     ```
 
--   Restore apps and packages on a new machine.
+### Restore
 
-    ```bash
-    brew bundle install --file=/Users/henry/Library/Mobile\ Documents/com~apple~CloudDocs/Homebrew/Brewfile
-    ```
+Restore apps and packages on a new machine.
+
+```bash
+brew bundle install --file=/Users/henry/Library/Mobile\ Documents/com~apple~CloudDocs/Homebrew/Brewfile
+```
 
 ## Reference
 
