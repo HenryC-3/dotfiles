@@ -4,18 +4,47 @@
 const fs = require("fs");
 const path = require("path");
 
-// setup commit types
-const { types } = require("./types.json");
-
 // setup commit scopes
 const scopes = getScopes().filter((scope) => {
-    const excludeScope = [".vscode", "dotbot", ".git"]; // those are not scopes
+    const excludeScope = [".vscode", "dotbot", ".git", "media"]; // those are not scopes
     const isNotExclude = !excludeScope.includes(scope);
     if (isNotExclude) {
         return scope;
     }
 });
-scopes.push("dev");
+scopes.push("dev", "root");
+
+// setup commit types
+const types = [
+    {
+        name: "dotfiles: Add, remove, modify a dotfile",
+        value: "dotfiles",
+    },
+    {
+        name: "dotbot: Changes that affect the dotbot",
+        value: "dotbot",
+    },
+    {
+        name: "feat: A new feature",
+        value: "feat",
+    },
+    {
+        name: "fix: A bug fix",
+        value: "fix",
+    },
+    {
+        name: "docs: Documentation only changes",
+        value: "docs",
+    },
+    {
+        name: "refactor: Changes the folder structure",
+        value: "refactor",
+    },
+    {
+        name: "chore: Changes things like update workspaces settings or styles",
+        value: "chore",
+    },
+];
 
 module.exports = {
     questions({ inquirer }) {
@@ -48,53 +77,54 @@ module.exports = {
                 message:
                     "Provide a longer description of the change: (press enter to skip)\n",
             },
-            {
-                type: "confirm",
-                name: "isBreaking",
-                message: "Are there any breaking changes?",
-                default: false,
-            },
-            {
-                type: "input",
-                name: "breakingBody",
-                default: "-",
-                message:
-                    "A BREAKING CHANGE commit requires a body. Please enter a longer description of the commit itself:\n",
-                when: (answers) => answers.isBreaking && !answers.body,
-            },
-            {
-                type: "input",
-                name: "breaking",
-                message: "Describe the breaking changes:\n",
-                when: (answers) => answers.isBreaking,
-            },
-            {
-                type: "confirm",
-                name: "isIssueAffected",
-                message: "Does this change affect any open issues?",
-                default: false,
-            },
-            {
-                type: "input",
-                name: "issuesBody",
-                default: "-",
-                message:
-                    "If issues are closed, the commit requires a body. Please enter a longer description of the commit itself:\n",
-                when: (answers) =>
-                    answers.isIssueAffected &&
-                    !answers.body &&
-                    !answers.breakingBody,
-            },
-            {
-                type: "input",
-                name: "issues",
-                message:
-                    'Add issue references (e.g. "fix #123", "re #123".):\n',
-                when: (answers) => answers.isIssueAffected,
-                default: undefined,
-                validate: (issues) =>
-                    issues.length === 0 ? "issues is required" : true,
-            },
+            // {
+            //     type: "confirm",
+            //     name: "isBreaking",
+            //     message: "Are there any breaking changes?",
+            //     default: false,
+            // },
+            // {
+            //     type: "input",
+            //     name: "breakingBody",
+            //     default: "-",
+            //     message:
+            //         "A BREAKING CHANGE commit requires a body. Please enter a longer description of the commit itself:\n",
+            //     when: (answers) => answers.isBreaking && !answers.body,
+            // },
+            // {
+            //     type: "input",
+            //     name: "breaking",
+            //     message: "Describe the breaking changes:\n",
+            //     when: (answers) => answers.isBreaking,
+            // },
+
+            // {
+            //     type: "confirm",
+            //     name: "isIssueAffected",
+            //     message: "Does this change affect any open issues?",
+            //     default: false,
+            // },
+            // {
+            //     type: "input",
+            //     name: "issuesBody",
+            //     default: "-",
+            //     message:
+            //         "If issues are closed, the commit requires a body. Please enter a longer description of the commit itself:\n",
+            //     when: (answers) =>
+            //         answers.isIssueAffected &&
+            //         !answers.body &&
+            //         !answers.breakingBody,
+            // },
+            // {
+            //     type: "input",
+            //     name: "issues",
+            //     message:
+            //         'Add issue references (e.g. "fix #123", "re #123".):\n',
+            //     when: (answers) => answers.isIssueAffected,
+            //     default: undefined,
+            //     validate: (issues) =>
+            //         issues.length === 0 ? "issues is required" : true,
+            // },
         ];
     },
     commitMessage({ answers }) {
