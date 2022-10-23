@@ -1,11 +1,15 @@
+## npmrc
+
+`npmrc` stores npm and pnpm settings.
+
 ## Volta
 
 [Volta](https://volta.sh/) is a version manager for Node/npm/yarn/npm packages.
 
 ### notice
 
--   use `vol` instead `volta` for auto backup purpose. see [solution](#solution) for detail.
--   `.volta` in current directory is a **symlink** which links to Icloud.
+- use `vol` instead `volta` for auto backup purpose. see [solution](#solution) for detail.
+- `.volta` in current directory is a **symlink** which links to Icloud.
 
 ### situation
 
@@ -31,7 +35,7 @@ vol() {
 
 toolchain are follow things installed through volta.
 
--   npm package
--   node
--   npm
--   yarn
+- npm package
+- node
+- npm
+- yarn
