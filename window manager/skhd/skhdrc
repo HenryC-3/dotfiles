@@ -12,12 +12,12 @@
 # ====================================================
 # 🌟 app
 # 👀 move focus between apps
-ctrl + alt + cmd - h : yabai -m window --focus first
+ctrl + alt + cmd - u : yabai -m window --focus first
 # 🔁 cycle focus between apps in clockwise
-ctrl + alt + cmd - j : yabai -m window --focus prev || yabai -m window --focus last
+ctrl + alt + cmd - i : yabai -m window --focus prev || yabai -m window --focus last
 # 🔄 cycle focus between apps in counter clockwise
-ctrl + alt + cmd - k : yabai -m window --focus next || yabai -m window --focus first
-ctrl + alt + cmd - l : yabai -m window --focus last 
+ctrl + alt + cmd - o : yabai -m window --focus next || yabai -m window --focus first
+ctrl + alt + cmd - p : yabai -m window --focus last 
 
 # layout
 # 🔁 rotate layout clockwise
