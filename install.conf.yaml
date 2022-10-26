@@ -16,7 +16,7 @@
 - link:
       ~/.config/nvim: ./editor/nvim
       ~/.config/alacritty: ./terminal/emulator/alacritty
-      ~/.config/skhd: ./window manager/skhd
+      ~/.config/skhd/skhdrc: ./window manager/skhdrc
       ~/.config/karabiner/karabiner.json: ./keyboard/karabiner.json
       ~/.yabairc: ./window manager/.yabairc
       ~/.fzf.zsh: ./terminal/feature/.fzf.zsh
