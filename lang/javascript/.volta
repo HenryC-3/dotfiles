@@ -1,8 +1,0 @@
-runtime node@19.0.0 (default)
-package-manager npm@8.19.2 (default)
-package-manager yarn@1.22.19 (default)
-package commitizen@4.2.5 / cz, git-cz, commitizen / node@19.0.0 npm@built-in (default)
-package cz-conventional-changelog@3.3.0 / / node@19.0.0 npm@built-in (default)
-package cz-format-extension@1.5.0 / / node@19.0.0 npm@built-in (default)
-package eslint@8.25.0 / eslint / node@19.0.0 npm@built-in (default)
-package pnpm@7.13.5 / pnpm, pnpx / node@19.0.0 npm@built-in (default)
