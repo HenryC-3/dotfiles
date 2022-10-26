@@ -52,7 +52,9 @@ yabai -m config window_gap                   4
 # ignore with certain titles eg. Copying files or moving to bin
 yabai -m rule --add title="(Copy|Bin|About This Mac|Info)" manage=off
 
-# ignore some apps which are not resizable
-yabai -m rule --add app="^(Calculator|VLC|System Preferences|Discord|Slack|Activity Monitor|Logi Options+|Raycast|Ukelele)$" manage=off
+# Do not manage windows with certain titles eg. Copying files or moving to bin
+yabai -m rule --add title="(Discord|Slack|Activity Monitor|Logi Options+|Raycast|Ukelele|Copy|Bin|About This Mac|Info)" manage=off
+# Do not manage some apps which are not resizable
+yabai -m rule --add app="^(Calculator|VLC|System Preferences)$" manage=off
 
 echo "yabai configuration loaded.."
