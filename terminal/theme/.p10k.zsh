@@ -19,6 +19,20 @@
 [[ ! -o 'no_brace_expand' ]] || p10k_config_opts+=('no_brace_expand')
 'builtin' 'setopt' 'no_aliases' 'no_sh_glob' 'brace_expand'
 
+# display NodeJS version icon based on volta (https://volta.sh/) https://github.com/romkatv/powerlevel10k/issues/1388#issuecomment-859352008
+function prompt_my_volta() {
+  emulate -L zsh -o extended_glob
+  # Don't do anything if there is no `node` command.
+  (( $+commands[node] )) || return
+  # Don't do anything if there is no `package.json` file.
+  [[ -n ./(../)#package.json(#qN) ]] || return
+  # Get version of `node` command.
+  local version
+  version=$(node --version) || return
+  # Display it with white foreground on green background.
+  p10k segment -b green -f white -ri NODE_ICON -t "${version#v}"
+}
+
 () {
   emulate -L zsh -o extended_glob
 
@@ -58,6 +72,7 @@
     nodenv                  # node.js version from nodenv (https://github.com/nodenv/nodenv)
     nvm                     # node.js version from nvm (https://github.com/nvm-sh/nvm)
     nodeenv                 # node.js environment (https://github.com/ekalinin/nodeenv)
+    my_volta                # node.js version from volta (https://volta.sh/) https://github.com/romkatv/powerlevel10k/issues/1388#issuecomment-859352008
     # node_version          # node.js version
     # go_version            # go version (https://golang.org)
     # rust_version          # rustc version (https://www.rust-lang.org)
