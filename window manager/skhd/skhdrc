@@ -26,9 +26,17 @@ ctrl + alt + cmd - r : yabai -m space --rotate 270
 ctrl + alt + cmd - f : yabai -m window --toggle zoom-fullscreen
 # toggle apps gap
 ctrl + alt + cmd - g : yabai -m space --toggle padding; yabai -m space --toggle gap
+
 # toggle center
-ctrl + alt + cmd - c : yabai -m window --toggle float;\
-          yabai -m window --grid 4:4:1:1:2:2
+# ctrl + alt + cmd - c : yabai -m window --toggle float;\
+#           yabai -m window --grid 4:4:1:1:2:2
+
+# toggle always float center https://github.com/koekeishiya/yabai/discussions/809#discussioncomment-326339
+ctrl + alt + cmd - c : app=$(yabai -m query --windows --window mouse | jq -r '.app' | tr ' ' '_');\
+         yabai -m window --toggle float;\
+         yabai -m window --grid 6:6:1:1:4:4;\
+         yabai -m signal --remove autofloat_$app || yabai -m signal --add event=window_created app=$app label=autofloat_$app action="yabai -m window $YABAI_WINDOW_ID --toggle float"
+
 # toggole horizontal/vertical split
 ctrl + alt + cmd - x : yabai -m window --toggle split
 
