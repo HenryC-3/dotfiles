@@ -4,10 +4,13 @@ This repo contains serval dotfiles on my personal Macbook.
 
 ## Guide
 
--   [Workflow](#workflow): find how to add/remove/sync dotfiles.
--   [Structure](#structure): locate a specific dotfile.
--   [Homebrew](./Homebrew.md): how homebrew backed up.
--   [Dotbot](#what-dotbot-does-for-you): the inner mechanism.
+-   add/remove/sync dotfiles: [Workflow](#workflow)
+-   locate a specific dotfile: [Structure](#structure)
+-   setup the core: [Homebrew](./Homebrew.md)
+-   checkout the inner mechanism: [Dotbot](#what-dotbot-does-for-you)
+
+<!-- TODO: write a bootstrap script -->
+<!-- TODO: write a Recovery.md to demonstrate how to setup all the things on a new machine -->
 
 ## Workflow
 
