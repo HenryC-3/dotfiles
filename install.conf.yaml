@@ -17,7 +17,7 @@
       ~/.config/nvim: ./editor/nvim
       ~/.config/alacritty: ./terminal/emulator/alacritty
       ~/.config/skhd: ./window manager/skhd
-      ~/.config/karabiner: ./window manager/karabiner
+      ~/.config/karabiner/karabiner.json: ./keyboard/karabiner.json
       ~/.yabairc: ./window manager/.yabairc
       ~/.fzf.zsh: ./terminal/feature/.fzf.zsh
       ~/.p10k.zsh: ./terminal/theme/.p10k.zsh
