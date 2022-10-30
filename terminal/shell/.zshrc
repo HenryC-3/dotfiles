@@ -28,6 +28,8 @@ export PATH="/usr/local/opt/openjdk/bin:$PATH" # openjdk
 export PATH="/usr/local/opt/maven/bin:$PATH" # maven
 export HOMEBREW_NO_AUTO_UPDATE=1 # disable homebrew autoupdate when running `brew` command for saving time
 export HOMEBREW_FORCE_BREWED_CURL=1 # fix progress bar https://github.com/Homebrew/brew/issues/5563#issuecomment-457789500 
+export ROOT_SUPER_PROJECT=/Users/henry/HH-workspace
+
 
 # https://npmmirror.com/
 alias cnpm="npm --registry=https://registry.npmmirror.com \
@@ -47,6 +49,15 @@ fi
 vol() {
   volta "$@"
   volta list --format=plain > "${ICLOUD_HOME}/Volta/.volta"
+}
+
+# update the submodule link in super-project recursivly after commit in submodule.
+# why dont use git post-commit? see  [Cannot trigger post-commit git hook on git submodule - Stack Overflow](https://stackoverflow.com/questions/36196548/cannot-trigger-post-commit-git-hook-on-git-submodule/36216851#36216851)
+gcm(){
+  git commit -m "$@"
+  echo "update submodule link in super-project"
+  zx /Users/henry/HH-workspace/dotfile/git/scripts/autoUpdateLink.mjs
+  echo "done"
 }
 
 source $ZSH/oh-my-zsh.sh
