@@ -1,3 +1,15 @@
+## scripts
+
+包含若干自动化 git 脚本
+
+## hooks
+
+包含若干 git 全局 hook
+
+```bash
+git config --global core.hooksPath /path/to/my/hooks
+```
+
 ## Cz-cli
 
 [Cz-cli](https://github.com/commitizen/cz-cli#making-your-repo-commitizen-friendly) 用于快速生成规范的 git 提交格式。
