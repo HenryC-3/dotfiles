@@ -23,9 +23,7 @@
                                 "from": {
                                     "key_code": "caps_lock",
                                     "modifiers": {
-                                        "mandatory": [
-                                            "any"
-                                        ]
+                                        "mandatory": ["any"]
                                     }
                                 },
                                 "to": [
@@ -177,6 +175,16 @@
                             "to": [
                                 {
                                     "key_code": "left_command"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "right_option"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "escape"
                                 }
                             ]
                         }
