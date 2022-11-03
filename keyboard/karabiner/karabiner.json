@@ -23,7 +23,9 @@
                                 "from": {
                                     "key_code": "right_control",
                                     "modifiers": {
-                                        "mandatory": ["any"]
+                                        "mandatory": [
+                                            "any"
+                                        ]
                                     }
                                 },
                                 "to": [
@@ -41,7 +43,9 @@
                                 "from": {
                                     "key_code": "right_shift",
                                     "modifiers": {
-                                        "mandatory": ["any"]
+                                        "mandatory": [
+                                            "any"
+                                        ]
                                     }
                                 },
                                 "to": [
@@ -59,7 +63,9 @@
                                 "from": {
                                     "key_code": "caps_lock",
                                     "modifiers": {
-                                        "mandatory": ["any"]
+                                        "mandatory": [
+                                            "any"
+                                        ]
                                     }
                                 },
                                 "to": [
@@ -77,13 +83,18 @@
                                 "from": {
                                     "key_code": "right_alt",
                                     "modifiers": {
-                                        "mandatory": ["any"]
+                                        "mandatory": [
+                                            "any"
+                                        ]
                                     }
                                 },
                                 "to": [
                                     {
                                         "key_code": "left_control",
-                                        "modifiers": ["left_shift", "left_alt"]
+                                        "modifiers": [
+                                            "left_shift",
+                                            "left_alt"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -105,11 +116,6 @@
                                         }
                                     }
                                 ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "tab"
-                                    }
-                                ],
                                 "to_after_key_up": [
                                     {
                                         "set_variable": {
@@ -118,13 +124,18 @@
                                         }
                                     }
                                 ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "tab"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
                                 "conditions": [
                                     {
-                                        "type": "variable_if",
                                         "name": "tab_modifier",
+                                        "type": "variable_if",
                                         "value": 1
                                     }
                                 ],
@@ -141,8 +152,8 @@
                             {
                                 "conditions": [
                                     {
-                                        "type": "variable_if",
                                         "name": "tab_modifier",
+                                        "type": "variable_if",
                                         "value": 1
                                     }
                                 ],
@@ -159,8 +170,8 @@
                             {
                                 "conditions": [
                                     {
-                                        "type": "variable_if",
                                         "name": "tab_modifier",
+                                        "type": "variable_if",
                                         "value": 1
                                     }
                                 ],
@@ -177,8 +188,8 @@
                             {
                                 "conditions": [
                                     {
-                                        "type": "variable_if",
                                         "name": "tab_modifier",
+                                        "type": "variable_if",
                                         "value": 1
                                     }
                                 ],
