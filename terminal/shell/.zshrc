@@ -5,6 +5,8 @@ fi
 
 # 👀 zoxide replacement of cd/autojump commands
 eval "$(zoxide init zsh)" # https://github.com/ajeetdsouza/zoxide#step-2-add-zoxide-to-your-shell
+# 👀 navi shell widget 
+eval "$(navi widget zsh)" # https://github.com/denisidoro/navi/blob/master/docs/installation.md#installing-the-shell-widget
 
 export ZSH="/Users/henry/.oh-my-zsh"
 plugins=(
