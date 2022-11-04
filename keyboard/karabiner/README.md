@@ -9,6 +9,7 @@
 -   查看键位映射
     -   [karabiner.json](./karabiner.json)>profile>0>complex-modifications>rules
     -   打开 karabiner-elements，点击左侧 complex-modifications
+    -  [capslock_keymap](./CapsLock-keymap.md): 着重介绍了围绕 caps_lock 展开的键位
 -   [添加复杂映射](#添加映射)
 -   使用 karabiner event viewer 查看按键具体触发的键位
 

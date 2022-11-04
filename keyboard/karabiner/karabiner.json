@@ -3251,12 +3251,11 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "command + open_bracket [ = {",
+                                "description": "open_bracket [ = {",
                                 "from": {
                                     "key_code": "open_bracket",
                                     "modifiers": {
                                         "mandatory": [
-                                            "left_command",
                                             "right_command",
                                             "right_control",
                                             "right_shift",
@@ -3295,11 +3294,12 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "open_bracket [ = (",
+                                "description": "command + open_bracket [ = (",
                                 "from": {
                                     "key_code": "open_bracket",
                                     "modifiers": {
                                         "mandatory": [
+                                            "left_command",
                                             "right_command",
                                             "right_control",
                                             "right_shift",
@@ -3316,12 +3316,11 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "command + close_bracket ] = }",
+                                "description": "close_bracket ] = }",
                                 "from": {
                                     "key_code": "close_bracket",
                                     "modifiers": {
                                         "mandatory": [
-                                            "left_command",
                                             "right_command",
                                             "right_control",
                                             "right_shift",
@@ -3360,11 +3359,12 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "close_bracket ] = )",
+                                "description": "command + close_bracket ] = )",
                                 "from": {
                                     "key_code": "close_bracket",
                                     "modifiers": {
                                         "mandatory": [
+                                            "left_command",
                                             "right_command",
                                             "right_control",
                                             "right_shift",
@@ -3402,7 +3402,7 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "slash / = command + / (comment)",
+                                "description": "slash / = ?",
                                 "from": {
                                     "key_code": "slash",
                                     "modifiers": {
@@ -3417,7 +3417,50 @@
                                 "to": [
                                     {
                                         "key_code": "slash",
-                                        "modifiers": ["left_command"]
+                                        "modifiers": ["left_shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "slash / + command = backslash",
+                                "from": {
+                                    "key_code": "slash",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_command",
+                                            "right_command",
+                                            "right_control",
+                                            "right_shift",
+                                            "right_option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "backslash"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "slash / + option = |",
+                                "from": {
+                                    "key_code": "slash",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_option",
+                                            "right_command",
+                                            "right_control",
+                                            "right_shift",
+                                            "right_option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "backslash",
+                                        "modifiers": ["left_shift"]
                                     }
                                 ],
                                 "type": "basic"
@@ -3445,6 +3488,28 @@
                                 "type": "basic"
                             },
                             {
+                                "description": "option + semicolon = @",
+                                "from": {
+                                    "key_code": "semicolon",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_option",
+                                            "right_command",
+                                            "right_control",
+                                            "right_shift",
+                                            "right_option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "2",
+                                        "modifiers": ["left_shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
                                 "description": "semicolon = :",
                                 "from": {
                                     "key_code": "semicolon",
@@ -3466,7 +3531,7 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "command + quote = equal_sign",
+                                "description": "command + quote = $",
                                 "from": {
                                     "key_code": "quote",
                                     "modifiers": {
@@ -3481,13 +3546,36 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "equal_sign"
+                                        "key_code": "4",
+                                        "modifiers": ["left_shift"]
                                     }
                                 ],
                                 "type": "basic"
                             },
                             {
-                                "description": "quote = equal_sign",
+                                "description": "option + quote = %",
+                                "from": {
+                                    "key_code": "quote",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_option",
+                                            "right_command",
+                                            "right_control",
+                                            "right_shift",
+                                            "right_option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "5",
+                                        "modifiers": ["left_shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "quote = #",
                                 "from": {
                                     "key_code": "quote",
                                     "modifiers": {
@@ -3501,7 +3589,10 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "equal_sign"
+                                        "key_code": "3"
+                                        ,"modifiers":[
+                                            "left_shift"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
