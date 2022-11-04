@@ -407,6 +407,31 @@
                 },
                 "rules": [
                     {
+                        "description": "Tab to ctrl+opt+cmd, set for skhd and yabai",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "tab"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_control",
+                                        "modifiers": [
+                                            "right_command",
+                                            "right_option"
+                                        ]
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "tab"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "CapsLock to Hyper",
                         "manipulators": [
                             {
