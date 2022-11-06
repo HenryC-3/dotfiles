@@ -11,7 +11,7 @@ const originNav = flat(originNavigationRules, { maxDepth: 3 }) as {
 };
 
 export async function getComplexRules(
-    path: string = `/Users/henry/HH-workspace/dotfile/keyboard/karabiner/scripts/karabiner-rules/${Date.now()}.json`
+    path: string = `/Users/henry/HH-workspace/dotfile/keyboard/karabiner/scripts/workbench/karabiner-rules/${Date.now()}.json`
 ) {
     const rules: karabinerRule[] = [];
     Object.keys(hyperNav).forEach((key: string) => {

@@ -1,5 +1,6 @@
 import { Anchors, karabinerFromKey, karabinerToKey } from "../types";
-import { modifiers, arrowKey, preferKeys } from "./keys";
+import { modifiers, arrowKey } from "./keys";
+import { preferKeys } from "./anchorKey";
 import { getFromKeyWithHyper, getToKey } from "./index";
 
 /** contains a set of keybindings for char/line/page in default keymap */

@@ -15,30 +15,17 @@
 
 ### Navigation
 
--   <kbd>H</kbd>, <kbd>J</kbd>, <kbd>K</kbd>, <kbd>L</kbd>, <kbd>U</kbd>, <kbd>I</kbd>, <kbd>O</kbd>, <kbd>P</kbd> are used as **Navigators**. Maps to <kbd>←</kbd><kbd>↓</kbd><kbd>↑</kbd><kbd>→</kbd><kbd>⇞</kbd><kbd>↖</kbd><kbd>↘</kbd><kbd>⇟</kbd> by default. (pink area).
--   9 control planes has already been allocated for navigators.
--   Hold additional <kbd>⌘</kbd> Command for **selection**. (like holding <kbd>⇧</kbd>shift in normal), additional <kbd>⌥</kbd> Option for **word/para selection**. <!--NOTE 以词为单位选择内容时，手指会变成孔雀状，有点不适应，相较于之间大幅减少了手腕位移-->
--   Hold additional <kbd>⇧</kbd> Shift for **app/win/tab switching**. Hold additional <kbd>⌃</kbd> Control for **desktop management** .
--   <!--DONE 移除 mouse move 将该行为替换为 word left/right-->Hold additional <kbd>⌥</kbd> Option for 🖱️ **mouse move**.  Add <kbd>⇧</kbd>shift to **⏫ accelerate**.  (<kbd>U</kbd>, <kbd>I</kbd>, <kbd>O</kbd>, <kbd>P</kbd> maps to mouse buttons) .
--   <kbd>⇧</kbd><kbd>⌥</kbd> turns navigator to **🖲️ mouse wheel**, and <kbd>⇧</kbd><kbd>⌘</kbd> is the ⏫ **accelerated** version . `HJKL` for wheel, wihle `UIOP` for reversed wheel move.
+-   vim arrow(basic move) opt(advance move) cmd(select)
+-   H(line start) J(word start) K(word end) L(line end)
+-   U(page start) I(select prev line) O(select prev line) P(page end)
 
-| Feature      |   **Move**   |     WordMove      |  **Select**  | **WordSel**              |
-| ------------ | :----------: | :---------------: | :----------: | ------------------------ |
-| Key\Mod      | <kbd>✱</kbd> |   <kbd>⌥</kbd>    | <kbd>⌘</kbd> | <kbd>⌘</kbd><kbd>⌥</kbd> |
-| <kbd>H</kbd> |     Left     |                   |  word left   | word left                |
-| <kbd>J</kbd> |     Down     | previous word end |  line down   | 3 line down              |
-| <kbd>K</kbd> |      Up      |  next word start  |   line up    | 3 line up                |
-| <kbd>L</kbd> |    Right     |                   |  word right  | word right               |
-| <kbd>U</kbd> |     PgUp     |                   |  prev page   | prev page                |
-| <kbd>I</kbd> |     Home     |                   |  line head   | end2head                 |
-| <kbd>O</kbd> |     End      |                   |   line end   | head2end                 |
-| <kbd>P</kbd> |     PgDn     |                   |  next page   | next page                |
-
-<!--NOTE 在 vscode 里，hyper+I/O 可以实现 move line head/end，但在 typora 中却是页首/尾-->
-
-<!--DONE 移除上表中，window 和 desktop 列的快捷键，使用 yabai 控制 window 以及 desktop space-->
-
-<!--PENDING 考虑移除有关鼠标及滚轮的相关快捷键-->
+| unit/action | move                         | select                       | note                                        |
+| ----------- | ---------------------------- | ---------------------------- | ------------------------------------------- |
+| char(x)     | <kbd>h/l</kbd>               | <kbd>cmd</kbd><kbd>h/l</kbd> | next/prev char                              |
+| word(x)     | <kbd>opt</kbd><kbd>j/k</kbd> | <kbd>cmd</kbd><kbd>j/k</kbd> | word start/end                              |
+| line(x)     | <kbd>opt</kbd><kbd>h/l</kbd> | <kbd>opt</kbd><kbd>i/o</kbd> | line start/end                              |
+| line(y)     | <kbd>j/k</kbd>               | <kbd>cmd</kbd><kbd>i/o</kbd> | next/prev line                              |
+| page(x)     | <kbd>opt</kbd><kbd>u/p</kbd> | <kbd>cmd</kbd><kbd>u/p</kbd> | move to page start/end, select before/after |
 
 **Arrow Navigation**
 

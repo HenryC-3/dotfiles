@@ -4,20 +4,24 @@
 
 ## 快速开始
 
-常用
+### 基础
 
 -   查看键位映射
-    -   [karabiner.json](./karabiner.json)>profile>0>complex-modifications>rules
-    -   打开 karabiner-elements，点击左侧 complex-modifications
-    -  [capslock_keymap](./CapsLock-keymap.md): 着重介绍了围绕 caps_lock 展开的键位
+    -   通过源码：[karabiner.json](./karabiner.json)>profile>0>complex-modifications>rules
+    -   通过 karabiner-elements: 点击左侧 complex-modifications
+    -   通过 [capslock_keymap](./CapsLock-keymap.md): 了解围绕 caps_lock 展开的键位
 -   [添加复杂映射](#添加映射)
 -   使用 karabiner event viewer 查看按键具体触发的键位
 
-快速上手 karabiner
+### 上手 karabiner
 
 -   [熟悉 karabiner.json](#karabinerjson)
 -   [查找术语](https://karabiner-elements.pqrs.org/docs/json/)
 -   [查看复杂映射配置实例](https://karabiner-elements.pqrs.org/docs/json/typical-complex-modifications-examples/)
+
+### 使用 scripts
+
+使用 `scripts` 文件夹下的脚本快速生成、调整 karabiner 映射规则，详见 [README](./scripts/README.md)
 
 ## karabiner.json
 
