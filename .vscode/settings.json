@@ -1,5 +1,7 @@
 {
     "pasteImage.basePath": "${projectRoot}",
     "pasteImage.path": "${projectRoot}/${currentFileDir}/medias",
-    "cSpell.words": ["dotbot"]
+    "cSpell.words": ["dotbot"],
+    "markdown.updateLinksOnFileMove.enabled": "always",
+    "markdown.validate.enabled": true
 }
