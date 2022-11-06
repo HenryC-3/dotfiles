@@ -1,0 +1,356 @@
+[
+    {
+        "description": "char-cursorMove-left",
+        "from": {
+            "key_code": "d",
+            "modifiers": {
+                "mandatory": [
+                    "right_command",
+                    "right_control",
+                    "right_shift",
+                    "right_option"
+                ]
+            }
+        },
+        "to": { "key_code": "left_arrow" },
+        "type": "basic"
+    },
+    {
+        "description": "char-cursorMove-right",
+        "from": {
+            "key_code": "f",
+            "modifiers": {
+                "mandatory": [
+                    "right_command",
+                    "right_control",
+                    "right_shift",
+                    "right_option"
+                ]
+            }
+        },
+        "to": { "key_code": "right_arrow" },
+        "type": "basic"
+    },
+    {
+        "description": "char-select-left",
+        "from": {
+            "key_code": "d",
+            "modifiers": {
+                "mandatory": [
+                    "right_command",
+                    "right_control",
+                    "right_shift",
+                    "right_option",
+                    "left_command"
+                ]
+            }
+        },
+        "to": { "key_code": "left_arrow", "modifiers": ["left_shift"] },
+        "type": "basic"
+    },
+    {
+        "description": "char-select-right",
+        "from": {
+            "key_code": "f",
+            "modifiers": {
+                "mandatory": [
+                    "right_command",
+                    "right_control",
+                    "right_shift",
+                    "right_option",
+                    "left_command"
+                ]
+            }
+        },
+        "to": { "key_code": "right_arrow", "modifiers": ["left_shift"] },
+        "type": "basic"
+    },
+    {
+        "description": "word-cursorMove-left",
+        "from": {
+            "key_code": "j",
+            "modifiers": {
+                "mandatory": [
+                    "right_command",
+                    "right_control",
+                    "right_shift",
+                    "right_option",
+                    "left_option"
+                ]
+            }
+        },
+        "to": { "key_code": "left_arrow", "modifiers": ["left_option"] },
+        "type": "basic"
+    },
+    {
+        "description": "word-cursorMove-right",
+        "from": {
+            "key_code": "k",
+            "modifiers": {
+                "mandatory": [
+                    "right_command",
+                    "right_control",
+                    "right_shift",
+                    "right_option",
+                    "left_option"
+                ]
+            }
+        },
+        "to": { "key_code": "right_arrow", "modifiers": ["left_option"] },
+        "type": "basic"
+    },
+    {
+        "description": "word-select-left",
+        "from": {
+            "key_code": "j",
+            "modifiers": {
+                "mandatory": [
+                    "right_command",
+                    "right_control",
+                    "right_shift",
+                    "right_option",
+                    "left_command"
+                ]
+            }
+        },
+        "to": {
+            "key_code": "left_arrow",
+            "modifiers": ["left_shift", "left_option"]
+        },
+        "type": "basic"
+    },
+    {
+        "description": "word-select-right",
+        "from": {
+            "key_code": "k",
+            "modifiers": {
+                "mandatory": [
+                    "right_command",
+                    "right_control",
+                    "right_shift",
+                    "right_option",
+                    "left_command"
+                ]
+            }
+        },
+        "to": {
+            "key_code": "right_arrow",
+            "modifiers": ["left_shift", "left_option"]
+        },
+        "type": "basic"
+    },
+    {
+        "description": "lineX-cursorMove-start",
+        "from": {
+            "key_code": "h",
+            "modifiers": {
+                "mandatory": [
+                    "right_command",
+                    "right_control",
+                    "right_shift",
+                    "right_option",
+                    "left_option"
+                ]
+            }
+        },
+        "to": { "key_code": "left_arrow", "modifiers": ["left_command"] },
+        "type": "basic"
+    },
+    {
+        "description": "lineX-cursorMove-end",
+        "from": {
+            "key_code": "l",
+            "modifiers": {
+                "mandatory": [
+                    "right_command",
+                    "right_control",
+                    "right_shift",
+                    "right_option",
+                    "left_option"
+                ]
+            }
+        },
+        "to": { "key_code": "right_arrow", "modifiers": ["left_command"] },
+        "type": "basic"
+    },
+    {
+        "description": "lineX-select-start",
+        "from": {
+            "key_code": "h",
+            "modifiers": {
+                "mandatory": [
+                    "right_command",
+                    "right_control",
+                    "right_shift",
+                    "right_option",
+                    "left_command"
+                ]
+            }
+        },
+        "to": {
+            "key_code": "left_arrow",
+            "modifiers": ["left_command", "left_shift"]
+        },
+        "type": "basic"
+    },
+    {
+        "description": "lineX-select-end",
+        "from": {
+            "key_code": "l",
+            "modifiers": {
+                "mandatory": [
+                    "right_command",
+                    "right_control",
+                    "right_shift",
+                    "right_option",
+                    "left_command"
+                ]
+            }
+        },
+        "to": {
+            "key_code": "right_arrow",
+            "modifiers": ["left_command", "left_shift"]
+        },
+        "type": "basic"
+    },
+    {
+        "description": "lineY-select-prev",
+        "from": {
+            "key_code": "i",
+            "modifiers": {
+                "mandatory": [
+                    "right_command",
+                    "right_control",
+                    "right_shift",
+                    "right_option",
+                    "left_command"
+                ]
+            }
+        },
+        "to": { "key_code": "up_arrow", "modifiers": ["left_shift"] },
+        "type": "basic"
+    },
+    {
+        "description": "lineY-select-next",
+        "from": {
+            "key_code": "o",
+            "modifiers": {
+                "mandatory": [
+                    "right_command",
+                    "right_control",
+                    "right_shift",
+                    "right_option",
+                    "left_command"
+                ]
+            }
+        },
+        "to": { "key_code": "down_arrow", "modifiers": ["left_shift"] },
+        "type": "basic"
+    },
+    {
+        "description": "lineY-cursorMove-up",
+        "from": {
+            "key_code": "k",
+            "modifiers": {
+                "mandatory": [
+                    "right_command",
+                    "right_control",
+                    "right_shift",
+                    "right_option"
+                ]
+            }
+        },
+        "to": { "key_code": "up_arrow" },
+        "type": "basic"
+    },
+    {
+        "description": "lineY-cursorMove-down",
+        "from": {
+            "key_code": "j",
+            "modifiers": {
+                "mandatory": [
+                    "right_command",
+                    "right_control",
+                    "right_shift",
+                    "right_option"
+                ]
+            }
+        },
+        "to": { "key_code": "down_arrow" },
+        "type": "basic"
+    },
+    {
+        "description": "page-cursorMove-start",
+        "from": {
+            "key_code": "u",
+            "modifiers": {
+                "mandatory": [
+                    "right_command",
+                    "right_control",
+                    "right_shift",
+                    "right_option",
+                    "left_option"
+                ]
+            }
+        },
+        "to": { "key_code": "up_arrow", "modifiers": ["left_command"] },
+        "type": "basic"
+    },
+    {
+        "description": "page-cursorMove-end",
+        "from": {
+            "key_code": "p",
+            "modifiers": {
+                "mandatory": [
+                    "right_command",
+                    "right_control",
+                    "right_shift",
+                    "right_option",
+                    "left_option"
+                ]
+            }
+        },
+        "to": { "key_code": "down_arrow", "modifiers": ["left_command"] },
+        "type": "basic"
+    },
+    {
+        "description": "page-select-above",
+        "from": {
+            "key_code": "u",
+            "modifiers": {
+                "mandatory": [
+                    "right_command",
+                    "right_control",
+                    "right_shift",
+                    "right_option",
+                    "left_command"
+                ]
+            }
+        },
+        "to": {
+            "key_code": "up_arrow",
+            "modifiers": ["left_command", "left_shift"]
+        },
+        "type": "basic"
+    },
+    {
+        "description": "page-select-below",
+        "from": {
+            "key_code": "p",
+            "modifiers": {
+                "mandatory": [
+                    "right_command",
+                    "right_control",
+                    "right_shift",
+                    "right_option",
+                    "left_command"
+                ]
+            }
+        },
+        "to": {
+            "key_code": "down_arrow",
+            "modifiers": ["left_command", "left_shift"]
+        },
+        "type": "basic"
+    }
+]
