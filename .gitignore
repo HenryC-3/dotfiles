@@ -1,2 +1,4 @@
 .personalInfo.json
 keyboard/karabiner/automatic_backups
+node_modules
+/keyboard/karabiner/scripts/dist
