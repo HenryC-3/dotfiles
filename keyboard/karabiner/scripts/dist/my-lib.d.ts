@@ -15,6 +15,9 @@ interface karabinerToKey {
     modifiers?: Array<string> | string;
 }
 
-declare function getComplexRules(path?: string): Promise<karabinerRule[]>;
+declare function zZcvTuiop(path?: string): Promise<karabinerRule[]>;
 
-export { getComplexRules };
+declare function getComplexRules(path?: string): Promise<karabinerRule[]>;
+declare const mapUndoRedoCopyPaste: typeof zZcvTuiop;
+
+export { getComplexRules, mapUndoRedoCopyPaste };

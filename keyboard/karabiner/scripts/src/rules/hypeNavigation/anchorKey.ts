@@ -1,5 +1,5 @@
-import { modifiers } from "./keys";
-import { Anchors } from "../types";
+import { modifiers } from "../../utils/keys";
+import { Anchors } from "./types";
 
 export type PreferKeys = Anchors<string> & {
     mode: {

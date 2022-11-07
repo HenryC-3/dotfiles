@@ -1,6 +1,6 @@
 // map cmd + Zzcv to hyper + uiop
 
-import { getJSONFIle, getKarabinerRule } from "../utils";
+import { getComplexRules, getJSONFIle, getKarabinerRule } from "../utils";
 import { karabinerFromKey, karabinerRule, karabinerToKey } from "../types";
 
 import { getFromKeyWithHyper, getToKey } from "../utils";
@@ -22,23 +22,8 @@ const from: Record<Key, karabinerFromKey> = {
     paste: getFromKeyWithHyper("p"),
 };
 
-export async function zZcvTuiop(
+export async function mapRedoUndoCopyPaste(
     path: string = `/Users/henry/HH-workspace/dotfile/keyboard/karabiner/scripts/workbench/karabiner-rules/${Date.now()}.json`
 ) {
-    const rules: karabinerRule[] = [];
-    Object.keys(from).forEach((key) => {
-        const theKey = key as Key;
-        const rule = getKarabinerRule(
-            key.split(".").join("-"),
-            from[theKey],
-            to[theKey]
-        );
-        rules.push(rule);
-    });
-    try {
-        await getJSONFIle(rules, path);
-    } catch (error) {
-        console.log(error);
-    }
-    return rules;
+    getComplexRules(to, from, path);
 }

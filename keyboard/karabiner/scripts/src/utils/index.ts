@@ -2,6 +2,31 @@ import fs from "fs";
 import { karabinerFromKey, karabinerRule, karabinerToKey } from "../types";
 import { hyper } from "./keys";
 
+export async function getComplexRules<
+    T extends { [index: string]: karabinerToKey },
+    F extends { [index: string]: karabinerFromKey }
+>(
+    to: T,
+    from: F,
+    path: string = `/Users/henry/HH-workspace/dotfile/keyboard/karabiner/scripts/workbench/karabiner-rules/${Date.now()}.json`
+) {
+    const rules: karabinerRule[] = [];
+    Object.keys(from).forEach((key: string) => {
+        const rule = getKarabinerRule(
+            key.split(".").join("-"),
+            from[key],
+            to[key]
+        );
+        rules.push(rule);
+    });
+    try {
+        await getJSONFIle(rules, path);
+    } catch (error) {
+        console.log(error);
+    }
+    return rules;
+}
+
 export function getKarabinerRule(
     desc: string,
     fromKey: karabinerFromKey,

@@ -1,7 +1,8 @@
-import { Anchors, karabinerFromKey, karabinerToKey } from "../types";
-import { modifiers, arrowKey } from "./keys";
+import { karabinerFromKey, karabinerToKey } from "../../types";
+import { modifiers, arrowKey } from "../../utils/keys";
 import { preferKeys } from "./anchorKey";
-import { getFromKeyWithHyper, getToKey } from "./index";
+import { Anchors } from "./types";
+import { getFromKeyWithHyper, getToKey } from "../../utils/index";
 
 /** contains a set of keybindings for char/line/page in default keymap */
 export const originNavigationRules: Anchors<karabinerToKey> = {

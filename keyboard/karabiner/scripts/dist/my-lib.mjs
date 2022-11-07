@@ -19,6 +19,53 @@ const arrowKey = {
   up: "up_arrow",
   down: "down_arrow"
 };
+
+function getKarabinerRule(desc, fromKey, toKey) {
+  return {
+    description: desc,
+    from: fromKey,
+    to: toKey,
+    type: "basic"
+  };
+}
+async function getJSONFIle(data, path) {
+  await fs.writeFile(
+    path,
+    JSON.stringify(data),
+    { flag: "wx" },
+    function(err) {
+      if (err)
+        throw err;
+      console.log(`File saved in ${path}`);
+    }
+  );
+}
+function getToKey(keycode, modifiers = []) {
+  if (modifiers.length === 0) {
+    return {
+      key_code: keycode
+    };
+  }
+  return {
+    key_code: keycode,
+    modifiers
+  };
+}
+function getFromKey(keycode, modifiers) {
+  return {
+    key_code: keycode,
+    modifiers: {
+      mandatory: modifiers
+    }
+  };
+}
+function getFromKeyWithHyper(keycode, modifier = "") {
+  if (modifier) {
+    return getFromKey(keycode, [...hyper, modifier]);
+  }
+  return getFromKey(keycode, [...hyper]);
+}
+
 const preferKeys = {
   mode: {
     cursorMove: modifiers.opt,
@@ -75,52 +122,6 @@ const preferKeys = {
     }
   }
 };
-
-function getKarabinerRule(desc, fromKey, toKey) {
-  return {
-    description: desc,
-    from: fromKey,
-    to: toKey,
-    type: "basic"
-  };
-}
-async function getJSONFIle(data, path) {
-  await fs.writeFile(
-    path,
-    JSON.stringify(data),
-    { flag: "wx" },
-    function(err) {
-      if (err)
-        throw err;
-      console.log(`File saved in ${path}`);
-    }
-  );
-}
-function getToKey(keycode, modifiers = []) {
-  if (modifiers.length === 0) {
-    return {
-      key_code: keycode
-    };
-  }
-  return {
-    key_code: keycode,
-    modifiers
-  };
-}
-function getFromKey(keycode, modifiers) {
-  return {
-    key_code: keycode,
-    modifiers: {
-      mandatory: modifiers
-    }
-  };
-}
-function getFromKeyWithHyper(keycode, modifier = "") {
-  if (modifier) {
-    return getFromKey(keycode, [...hyper, modifier]);
-  }
-  return getFromKey(keycode, [...hyper]);
-}
 
 const originNavigationRules = {
   char: {
@@ -275,9 +276,40 @@ const hyperNavigationRules = {
   }
 };
 
+const to = {
+  undo: getToKey("z", [modifiers.cmd]),
+  redo: getToKey("z", [modifiers.cmd, modifiers.shift]),
+  copy: getToKey("c", [modifiers.cmd]),
+  paste: getToKey("v", [modifiers.cmd])
+};
+const from = {
+  undo: getFromKeyWithHyper("i"),
+  redo: getFromKeyWithHyper("u"),
+  copy: getFromKeyWithHyper("o"),
+  paste: getFromKeyWithHyper("p")
+};
+async function zZcvTuiop(path = `/Users/henry/HH-workspace/dotfile/keyboard/karabiner/scripts/workbench/karabiner-rules/${Date.now()}.json`) {
+  const rules = [];
+  Object.keys(from).forEach((key) => {
+    const theKey = key;
+    const rule = getKarabinerRule(
+      key.split(".").join("-"),
+      from[theKey],
+      to[theKey]
+    );
+    rules.push(rule);
+  });
+  try {
+    await getJSONFIle(rules, path);
+  } catch (error) {
+    console.log(error);
+  }
+  return rules;
+}
+
 const hyperNav = flat(hyperNavigationRules, { maxDepth: 3 });
 const originNav = flat(originNavigationRules, { maxDepth: 3 });
-async function getComplexRules(path = `/Users/henry/HH-workspace/dotfile/keyboard/karabiner/scripts/karabiner-rules/${Date.now()}.json`) {
+async function getComplexRules(path = `/Users/henry/HH-workspace/dotfile/keyboard/karabiner/scripts/workbench/karabiner-rules/${Date.now()}.json`) {
   const rules = [];
   Object.keys(hyperNav).forEach((key) => {
     const rule = getKarabinerRule(
@@ -294,6 +326,7 @@ async function getComplexRules(path = `/Users/henry/HH-workspace/dotfile/keyboar
   }
   return rules;
 }
+const mapUndoRedoCopyPaste = zZcvTuiop;
 
-export { getComplexRules };
+export { getComplexRules, mapUndoRedoCopyPaste };
 //# sourceMappingURL=my-lib.mjs.map
