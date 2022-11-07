@@ -14,6 +14,7 @@
 # create symlink in target directory
 # full options https://github.com/anishathalye/dotbot#link
 - link:
+      ~/.tmux.conf: ./terminal/feature/tmux/.tmux.conf
       ~/.config/nvim: ./editor/nvim
       ~/.config/alacritty: ./terminal/emulator/alacritty
       ~/.config/skhd/skhdrc: ./window manager/skhdrc
