@@ -49,25 +49,20 @@
 
 ## 项目结构
 
-项目结构如下所示，重点讲解标 🌟 的文件
-
--   [anchorKey.ts](src/utils/anchorKey.ts): 描述快捷操作及其对应键
--   [rules.ts](src/utils/rules.ts): 构造用于 karabiner.json 的对象
-
 ```bash
 .
-├── dist # 打包后的库
 ├── src
-│  ├── index.ts # 库入口文件
-│  ├── types.ts # 类型声明
+│  ├── rules
+│  │  ├── hypeNavigation
+│  │  └── mapRedoUndoCopyPaste.ts
+│  ├── types.ts
+│  ├── index.ts # 入口文件
 │  └── utils
-│     ├── index.ts # 工具函数
-│     ├── keys.ts # 键
-│     ├── anchorKey.ts # 🌟
-│     └── rules.ts # 🌟
+│     ├── index.ts
+│     └── keys.ts
 └── workbench
-   ├── index.js # 导入打包后的库文件，生成文件
-   └── karabiner-rules # 保存最终生成的 karabiner-rules
+   ├── index.js # import 文件执行操作
+   └── karabiner-rules # 生成的 karabiner.json 文件
 ```
 
 ## 核心思路
@@ -104,5 +99,5 @@
     };
     ```
 
-2. 描述完毕后，构建 `form` 和 `to`，详见 [rules](src/utils/rules.ts)
-3. 构建完整的对象，并生成 JSON 文件。详见 [getComplexRules](https://github.com/HenryC-3/dotfiles/blob/aad3317d30cacd15514262ee9e82c2c180768735/keyboard/karabiner/scripts/src/index.ts#L12-L31)
+2. 描述完毕后，构建 `form` 和 `to`，详见 [rules](src/rules/mapRedoUndoCopyPaste.ts)
+3. 构建完整的对象，并生成 JSON 文件。详见 [getComplexRules](https://github.com/HenryC-3/dotfiles/blob/5c3fdb491cfe19d6f4c7b8ae1f6dee51aa8a96d9/keyboard/karabiner/scripts/src/utils/index.ts#L5-L29)
