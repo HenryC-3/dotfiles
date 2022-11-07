@@ -2,6 +2,7 @@ import { getJSONFIle, getKarabinerRule } from "./utils";
 import { hyperNavigationRules, originNavigationRules } from "./utils/rules";
 import flat from "flat";
 import { karabinerFromKey, karabinerRule, karabinerToKey } from "./types";
+import { zZcvTuiop } from "./rules/mapRedoUndoCopyPaste";
 
 const hyperNav = flat(hyperNavigationRules, { maxDepth: 3 }) as {
     [index: string]: karabinerFromKey;
@@ -29,3 +30,5 @@ export async function getComplexRules(
     }
     return rules;
 }
+
+export const mapUndoRedoCopyPaste = zZcvTuiop;
