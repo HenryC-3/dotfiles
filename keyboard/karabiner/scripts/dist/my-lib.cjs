@@ -16,6 +16,11 @@ const hyper = [
   "right_shift",
   "right_option"
 ];
+const hyperExcludeShift = [
+  "right_command",
+  "right_control",
+  "right_option"
+];
 const modifiers = {
   ctrl: "left_control",
   cmd: "left_command",
@@ -29,6 +34,23 @@ const arrowKey = {
   down: "down_arrow"
 };
 
+async function getComplexRules(to, from, path = `/Users/henry/HH-workspace/dotfile/keyboard/karabiner/scripts/workbench/karabiner-rules/${Date.now()}.json`) {
+  const rules = [];
+  Object.keys(from).forEach((key) => {
+    const rule = getKarabinerRule(
+      key.split(".").join("-"),
+      from[key],
+      to[key]
+    );
+    rules.push(rule);
+  });
+  try {
+    await getJSONFIle(rules, path);
+  } catch (error) {
+    console.log(error);
+  }
+  return rules;
+}
 function getKarabinerRule(desc, fromKey, toKey) {
   return {
     description: desc,
@@ -68,7 +90,7 @@ function getFromKey(keycode, modifiers) {
     }
   };
 }
-function getFromKeyWithHyper(keycode, modifier = "") {
+function getFromKeyWithHyper$1(keycode, modifier = "") {
   if (modifier) {
     return getFromKey(keycode, [...hyper, modifier]);
   }
@@ -187,15 +209,15 @@ const originNavigationRules = {
 const hyperNavigationRules = {
   char: {
     cursorMove: {
-      left: getFromKeyWithHyper(preferKeys.char.cursorMove.left),
-      right: getFromKeyWithHyper(preferKeys.char.cursorMove.right)
+      left: getFromKeyWithHyper$1(preferKeys.char.cursorMove.left),
+      right: getFromKeyWithHyper$1(preferKeys.char.cursorMove.right)
     },
     select: {
-      left: getFromKeyWithHyper(
+      left: getFromKeyWithHyper$1(
         preferKeys.char.select.left,
         preferKeys.mode.select
       ),
-      right: getFromKeyWithHyper(
+      right: getFromKeyWithHyper$1(
         preferKeys.char.select.right,
         preferKeys.mode.select
       )
@@ -203,21 +225,21 @@ const hyperNavigationRules = {
   },
   word: {
     cursorMove: {
-      left: getFromKeyWithHyper(
+      left: getFromKeyWithHyper$1(
         preferKeys.word.cursorMove.left,
         preferKeys.mode.cursorMove
       ),
-      right: getFromKeyWithHyper(
+      right: getFromKeyWithHyper$1(
         preferKeys.word.cursorMove.right,
         preferKeys.mode.cursorMove
       )
     },
     select: {
-      left: getFromKeyWithHyper(
+      left: getFromKeyWithHyper$1(
         preferKeys.word.cursorMove.left,
         preferKeys.mode.select
       ),
-      right: getFromKeyWithHyper(
+      right: getFromKeyWithHyper$1(
         preferKeys.word.cursorMove.right,
         preferKeys.mode.select
       )
@@ -225,21 +247,21 @@ const hyperNavigationRules = {
   },
   lineX: {
     cursorMove: {
-      start: getFromKeyWithHyper(
+      start: getFromKeyWithHyper$1(
         preferKeys.lineX.cursorMove.start,
         preferKeys.mode.cursorMove
       ),
-      end: getFromKeyWithHyper(
+      end: getFromKeyWithHyper$1(
         preferKeys.lineX.cursorMove.end,
         preferKeys.mode.cursorMove
       )
     },
     select: {
-      start: getFromKeyWithHyper(
+      start: getFromKeyWithHyper$1(
         preferKeys.lineX.select.start,
         modifiers.opt
       ),
-      end: getFromKeyWithHyper(
+      end: getFromKeyWithHyper$1(
         preferKeys.lineX.select.end,
         modifiers.opt
       )
@@ -247,43 +269,71 @@ const hyperNavigationRules = {
   },
   lineY: {
     select: {
-      prev: getFromKeyWithHyper(
+      prev: getFromKeyWithHyper$1(
         preferKeys.lineY.select.prev,
         preferKeys.mode.select
       ),
-      next: getFromKeyWithHyper(
+      next: getFromKeyWithHyper$1(
         preferKeys.lineY.select.next,
         preferKeys.mode.select
       )
     },
     cursorMove: {
-      up: getFromKeyWithHyper(preferKeys.lineY.cursorMove.up),
-      down: getFromKeyWithHyper(preferKeys.lineY.cursorMove.down)
+      up: getFromKeyWithHyper$1(preferKeys.lineY.cursorMove.up),
+      down: getFromKeyWithHyper$1(preferKeys.lineY.cursorMove.down)
     }
   },
   page: {
     cursorMove: {
-      start: getFromKeyWithHyper(
+      start: getFromKeyWithHyper$1(
         preferKeys.page.cursorMove.start,
         preferKeys.mode.cursorMove
       ),
-      end: getFromKeyWithHyper(
+      end: getFromKeyWithHyper$1(
         preferKeys.page.cursorMove.end,
         preferKeys.mode.cursorMove
       )
     },
     select: {
-      above: getFromKeyWithHyper(
+      above: getFromKeyWithHyper$1(
         preferKeys.page.select.above,
         preferKeys.mode.select
       ),
-      below: getFromKeyWithHyper(
+      below: getFromKeyWithHyper$1(
         preferKeys.page.select.below,
         preferKeys.mode.select
       )
     }
   }
 };
+
+const from$2 = flat__default["default"](hyperNavigationRules, { maxDepth: 3 });
+const to$2 = flat__default["default"](originNavigationRules, { maxDepth: 3 });
+const hyperNavigation = (path = `/Users/henry/HH-workspace/dotfile/keyboard/karabiner/scripts/workbench/karabiner-rules/${Date.now()}.json`) => {
+  getComplexRules(to$2, from$2, path);
+};
+
+const to$1 = {
+  deleteCharForward: getToKey("delete_or_backspace"),
+  deleteWordForward: getToKey("delete_or_backspace", [modifiers.opt]),
+  deleteWordBackward: getToKey("delete_forward", [modifiers.opt]),
+  deleteCharBackward: getToKey("delete_forward")
+};
+const from$1 = {
+  deleteCharForward: getFromKeyWithHyper("n"),
+  deleteWordForward: getFromKeyWithHyper("m"),
+  deleteWordBackward: getFromKeyWithHyper("comma"),
+  deleteCharBackward: getFromKeyWithHyper("period")
+};
+async function mapDeleteBackspace(path = `/Users/henry/HH-workspace/dotfile/keyboard/karabiner/scripts/workbench/karabiner-rules/${Date.now()}.json`) {
+  getComplexRules(to$1, from$1, path);
+}
+function getFromKeyWithHyper(keycode, modifier = "") {
+  if (modifier) {
+    return getFromKey(keycode, [...hyperExcludeShift, modifier]);
+  }
+  return getFromKey(keycode, [...hyperExcludeShift]);
+}
 
 const to = {
   undo: getToKey("z", [modifiers.cmd]),
@@ -292,51 +342,20 @@ const to = {
   paste: getToKey("v", [modifiers.cmd])
 };
 const from = {
-  undo: getFromKeyWithHyper("i"),
-  redo: getFromKeyWithHyper("u"),
-  copy: getFromKeyWithHyper("o"),
-  paste: getFromKeyWithHyper("p")
+  undo: getFromKeyWithHyper$1("i"),
+  redo: getFromKeyWithHyper$1("u"),
+  copy: getFromKeyWithHyper$1("o"),
+  paste: getFromKeyWithHyper$1("p")
 };
-async function zZcvTuiop(path = `/Users/henry/HH-workspace/dotfile/keyboard/karabiner/scripts/workbench/karabiner-rules/${Date.now()}.json`) {
-  const rules = [];
-  Object.keys(from).forEach((key) => {
-    const theKey = key;
-    const rule = getKarabinerRule(
-      key.split(".").join("-"),
-      from[theKey],
-      to[theKey]
-    );
-    rules.push(rule);
-  });
-  try {
-    await getJSONFIle(rules, path);
-  } catch (error) {
-    console.log(error);
-  }
-  return rules;
+async function mapRedoUndoCopyPaste(path = `/Users/henry/HH-workspace/dotfile/keyboard/karabiner/scripts/workbench/karabiner-rules/${Date.now()}.json`) {
+  getComplexRules(to, from, path);
 }
 
-const hyperNav = flat__default["default"](hyperNavigationRules, { maxDepth: 3 });
-const originNav = flat__default["default"](originNavigationRules, { maxDepth: 3 });
-async function getComplexRules(path = `/Users/henry/HH-workspace/dotfile/keyboard/karabiner/scripts/workbench/karabiner-rules/${Date.now()}.json`) {
-  const rules = [];
-  Object.keys(hyperNav).forEach((key) => {
-    const rule = getKarabinerRule(
-      key.split(".").join("-"),
-      hyperNav[key],
-      originNav[key]
-    );
-    rules.push(rule);
-  });
-  try {
-    await getJSONFIle(rules, path);
-  } catch (error) {
-    console.log(error);
-  }
-  return rules;
-}
-const mapUndoRedoCopyPaste = zZcvTuiop;
+const mapHyperNavigation = hyperNavigation;
+const mapUndoRedoCopyPaste = mapRedoUndoCopyPaste;
+const mapBackSpaceDelete = mapDeleteBackspace;
 
-exports.getComplexRules = getComplexRules;
+exports.mapBackSpaceDelete = mapBackSpaceDelete;
+exports.mapHyperNavigation = mapHyperNavigation;
 exports.mapUndoRedoCopyPaste = mapUndoRedoCopyPaste;
 //# sourceMappingURL=my-lib.cjs.map

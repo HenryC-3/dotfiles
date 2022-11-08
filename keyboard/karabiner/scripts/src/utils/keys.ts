@@ -4,6 +4,13 @@ export const hyper = [
     "right_shift",
     "right_option",
 ];
+
+export const hyperExcludeShift = [
+    "right_command",
+    "right_control",
+    "right_option",
+];
+
 export const modifiers = {
     ctrl: "left_control",
     cmd: "left_command",
