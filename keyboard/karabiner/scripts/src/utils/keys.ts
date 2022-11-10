@@ -23,3 +23,8 @@ export const arrowKey = {
     up: "up_arrow",
     down: "down_arrow",
 };
+
+export const deleteKey = {
+    deleteBackward: "delete_or_backspace",
+    deleteForward: "delete_forward",
+};

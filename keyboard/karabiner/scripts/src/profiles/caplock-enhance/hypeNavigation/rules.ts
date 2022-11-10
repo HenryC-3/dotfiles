@@ -1,8 +1,8 @@
-import { karabinerFromKey, karabinerToKey } from "../../types";
-import { modifiers, arrowKey } from "../../utils/keys";
-import { preferKeys } from "./anchorKey";
+import { karabinerFromKey, karabinerToKey } from "../../../types";
+import { modifiers, arrowKey } from "../../../utils/keys";
+import { rightHand } from "./anchorKey";
 import { Anchors } from "./types";
-import { getFromKeyWithHyper, getToKey } from "../../utils/index";
+import { getFromKeyWithHyper, getToKey } from "../../../utils/index";
 
 /** contains a set of keybindings for char/line/page in default keymap */
 export const originNavigationRules: Anchors<karabinerToKey> = {
@@ -63,39 +63,39 @@ export const hyperNavigationRules: Anchors<karabinerFromKey> = {
     char: {
         /**hyper+H/L for move cursor left/right, no additional modifier key needed */
         cursorMove: {
-            left: getFromKeyWithHyper(preferKeys.char.cursorMove.left),
-            right: getFromKeyWithHyper(preferKeys.char.cursorMove.right),
+            left: getFromKeyWithHyper(rightHand.char.cursorMove.left),
+            right: getFromKeyWithHyper(rightHand.char.cursorMove.right),
         },
         select: {
             left: getFromKeyWithHyper(
-                preferKeys.char.select.left,
-                preferKeys.mode.select
+                rightHand.char.select.left,
+                rightHand.mode.select
             ),
             right: getFromKeyWithHyper(
-                preferKeys.char.select.right,
-                preferKeys.mode.select
+                rightHand.char.select.right,
+                rightHand.mode.select
             ),
         },
     },
     word: {
         cursorMove: {
             left: getFromKeyWithHyper(
-                preferKeys.word.cursorMove.left,
-                preferKeys.mode.cursorMove
+                rightHand.word.cursorMove.left,
+                rightHand.mode.cursorMove
             ),
             right: getFromKeyWithHyper(
-                preferKeys.word.cursorMove.right,
-                preferKeys.mode.cursorMove
+                rightHand.word.cursorMove.right,
+                rightHand.mode.cursorMove
             ),
         },
         select: {
             left: getFromKeyWithHyper(
-                preferKeys.word.cursorMove.left,
-                preferKeys.mode.select
+                rightHand.word.cursorMove.left,
+                rightHand.mode.select
             ),
             right: getFromKeyWithHyper(
-                preferKeys.word.cursorMove.right,
-                preferKeys.mode.select
+                rightHand.word.cursorMove.right,
+                rightHand.mode.select
             ),
         },
     },
@@ -103,60 +103,57 @@ export const hyperNavigationRules: Anchors<karabinerFromKey> = {
         cursorMove: {
             /**hyper+J/K for move cursor up/down, no additional modifier key needed */
             start: getFromKeyWithHyper(
-                preferKeys.lineX.cursorMove.start,
-                preferKeys.mode.cursorMove
+                rightHand.lineX.cursorMove.start,
+                rightHand.mode.cursorMove
             ),
             end: getFromKeyWithHyper(
-                preferKeys.lineX.cursorMove.end,
-                preferKeys.mode.cursorMove
+                rightHand.lineX.cursorMove.end,
+                rightHand.mode.cursorMove
             ),
         },
         select: {
             start: getFromKeyWithHyper(
-                preferKeys.lineX.select.start,
+                rightHand.lineX.select.start,
                 modifiers.opt
             ),
-            end: getFromKeyWithHyper(
-                preferKeys.lineX.select.end,
-                modifiers.opt
-            ),
+            end: getFromKeyWithHyper(rightHand.lineX.select.end, modifiers.opt),
         },
     },
     lineY: {
         select: {
             prev: getFromKeyWithHyper(
-                preferKeys.lineY.select.prev,
-                preferKeys.mode.select
+                rightHand.lineY.select.prev,
+                rightHand.mode.select
             ),
             next: getFromKeyWithHyper(
-                preferKeys.lineY.select.next,
-                preferKeys.mode.select
+                rightHand.lineY.select.next,
+                rightHand.mode.select
             ),
         },
         cursorMove: {
-            up: getFromKeyWithHyper(preferKeys.lineY.cursorMove.up),
-            down: getFromKeyWithHyper(preferKeys.lineY.cursorMove.down),
+            up: getFromKeyWithHyper(rightHand.lineY.cursorMove.up),
+            down: getFromKeyWithHyper(rightHand.lineY.cursorMove.down),
         },
     },
     page: {
         cursorMove: {
             start: getFromKeyWithHyper(
-                preferKeys.page.cursorMove.start,
-                preferKeys.mode.cursorMove
+                rightHand.page.cursorMove.start,
+                rightHand.mode.cursorMove
             ),
             end: getFromKeyWithHyper(
-                preferKeys.page.cursorMove.end,
-                preferKeys.mode.cursorMove
+                rightHand.page.cursorMove.end,
+                rightHand.mode.cursorMove
             ),
         },
         select: {
             above: getFromKeyWithHyper(
-                preferKeys.page.select.above,
-                preferKeys.mode.select
+                rightHand.page.select.above,
+                rightHand.mode.select
             ),
             below: getFromKeyWithHyper(
-                preferKeys.page.select.below,
-                preferKeys.mode.select
+                rightHand.page.select.below,
+                rightHand.mode.select
             ),
         },
     },

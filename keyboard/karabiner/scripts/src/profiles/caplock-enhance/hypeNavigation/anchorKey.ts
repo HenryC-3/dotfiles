@@ -1,4 +1,4 @@
-import { modifiers } from "../../utils/keys";
+import { modifiers } from "../../../utils/keys";
 import { Anchors } from "./types";
 
 export type PreferKeys = Anchors<string> & {
@@ -8,7 +8,7 @@ export type PreferKeys = Anchors<string> & {
     };
 };
 
-export const preferKeys: PreferKeys = {
+export const rightHand: PreferKeys = {
     mode: {
         cursorMove: modifiers.opt,
         select: modifiers.cmd,

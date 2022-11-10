@@ -9,11 +9,11 @@
 
  */
 
-import { getComplexRules } from "../utils";
-import { karabinerFromKey, karabinerToKey } from "../types";
+import { getComplexRules } from "../../utils";
+import { karabinerFromKey, karabinerToKey } from "../../types";
 
-import { getToKey, getFromKey } from "../utils";
-import { hyperExcludeShift, modifiers } from "../utils/keys";
+import { getToKey, getFromKey } from "../../utils";
+import { hyperExcludeShift, modifiers } from "../../utils/keys";
 
 type Key =
     | "deleteCharForward"

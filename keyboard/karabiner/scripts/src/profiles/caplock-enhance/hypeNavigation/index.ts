@@ -1,7 +1,7 @@
-import { getComplexRules } from "../../utils";
+import { getComplexRules } from "../../../utils";
 import { hyperNavigationRules, originNavigationRules } from "./rules";
 import flat from "flat";
-import { karabinerFromKey, karabinerToKey } from "../../types";
+import { karabinerFromKey, karabinerToKey } from "../../../types";
 
 const from = flat(hyperNavigationRules, { maxDepth: 3 }) as {
     [index: string]: karabinerFromKey;

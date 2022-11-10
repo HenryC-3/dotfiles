@@ -1,6 +1,47 @@
 import fs from "fs";
-import { karabinerFromKey, karabinerRule, karabinerToKey } from "../types";
+import {
+    karabinerCondition,
+    karabinerFromKey,
+    karabinerRule,
+    karabinerRuleWithCondition,
+    karabinerToKey,
+} from "../types";
 import { hyper } from "./keys";
+
+export function getCustomModifier(keycode: string) {
+    const customModifierName = `${keycode}_modifier`;
+    const rule = {
+        from: {
+            key_code: keycode,
+        },
+        to: [
+            {
+                set_variable: {
+                    name: customModifierName,
+                    value: 1,
+                },
+            },
+        ],
+        to_after_key_up: [
+            {
+                set_variable: {
+                    name: customModifierName,
+                    value: 0,
+                },
+            },
+        ],
+        to_if_alone: [
+            {
+                key_code: keycode,
+            },
+        ],
+        type: "basic",
+    };
+    return {
+        rule,
+        modifierName: customModifierName,
+    };
+}
 
 export async function getComplexRules<
     T extends { [index: string]: karabinerToKey },
@@ -8,14 +49,16 @@ export async function getComplexRules<
 >(
     to: T,
     from: F,
-    path: string = `/Users/henry/HH-workspace/dotfile/keyboard/karabiner/scripts/workbench/karabiner-rules/${Date.now()}.json`
+    path: string = `/Users/henry/HH-workspace/dotfile/keyboard/karabiner/scripts/workbench/karabiner-rules/${Date.now()}.json`,
+    conditions: Array<karabinerCondition> = []
 ) {
     const rules: karabinerRule[] = [];
     Object.keys(from).forEach((key: string) => {
         const rule = getKarabinerRule(
             key.split(".").join("-"),
             from[key],
-            to[key]
+            to[key],
+            conditions
         );
         rules.push(rule);
     });
@@ -30,13 +73,15 @@ export async function getComplexRules<
 export function getKarabinerRule(
     desc: string,
     fromKey: karabinerFromKey,
-    toKey: karabinerToKey
-): karabinerRule {
+    toKey: karabinerToKey,
+    conditions: Array<karabinerCondition> = []
+): karabinerRuleWithCondition {
     return {
         description: desc,
         from: fromKey,
         to: toKey,
         type: "basic",
+        conditions,
     };
 }
 

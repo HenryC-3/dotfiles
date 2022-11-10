@@ -1,10 +1,10 @@
 // map cmd + Zzcv to hyper + uiop
 
-import { getComplexRules, getJSONFIle, getKarabinerRule } from "../utils";
-import { karabinerFromKey, karabinerRule, karabinerToKey } from "../types";
+import { getComplexRules, getJSONFIle, getKarabinerRule } from "../../utils";
+import { karabinerFromKey, karabinerRule, karabinerToKey } from "../../types";
 
-import { getFromKeyWithHyper, getToKey } from "../utils";
-import { modifiers } from "../utils/keys";
+import { getFromKeyWithHyper, getToKey } from "../../utils";
+import { modifiers } from "../../utils/keys";
 
 type Key = "undo" | "redo" | "copy" | "paste";
 

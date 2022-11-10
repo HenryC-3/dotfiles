@@ -1,10 +1,20 @@
-import { Anchors } from "./rules/hypeNavigation/types";
+import { Anchors } from "./profiles/caplock-enhance/hypeNavigation/types";
 export interface karabinerRule {
     description: string;
     from: karabinerFromKey;
     to: karabinerToKey;
     type: "basic";
 }
+
+export interface karabinerCondition {
+    name: string;
+    type: "variable_if";
+    value: 1 | 0;
+}
+
+export type karabinerRuleWithCondition = karabinerRule & {
+    conditions: Array<karabinerCondition>;
+};
 
 export interface karabinerFromKey {
     key_code: string;
