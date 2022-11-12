@@ -3974,14 +3974,19 @@
                 },
                 "rules": [
                     {
-                        "description": "space to window manager leader key",
+                        "description": "shift + space to window manager leader key",
                         "manipulators": [
                             {
-                                "description": "space to cmd+shift+control",
-                                "from": { "key_code": "spacebar" },
+                                "description": "shift + space to cmd+shift+control",
+                                "from": {
+                                    "key_code": "spacebar",
+                                    "modifiers": {
+                                        "mandatory": ["left_shift"]
+                                    }
+                                },
                                 "to": [
                                     {
-                                        "key_code": "left_shift",
+                                        "key_code": "right_shift",
                                         "modifiers": [
                                             "right_command",
                                             "right_control"
@@ -3994,7 +3999,7 @@
                                     }
                                 ],
                                 "type": "basic"
-                             }
+                            }
                         ]
                     },
                     {
