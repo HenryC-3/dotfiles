@@ -20,7 +20,8 @@ plugins=(
 )
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-
+export VISUAL="nvim"
+export EDITOR="code --wait"
 export ICLOUD_HOME="$HOME/Library/Mobile Documents/com~apple~CloudDocs"
 export PATH=/usr/local/Cellar/mongodb-community-shell/4.2.0/bin:$PATH # mongodb
 export VOLTA_HOME="$HOME/.volta" # volta
