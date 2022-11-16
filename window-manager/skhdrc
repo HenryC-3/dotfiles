@@ -54,7 +54,7 @@ ctrl + shift + cmd - p : yabai -m window --swap east
 # Focus next space
 ctrl + shift + cmd - e : yabai -m space --focus next || yabai -m space --focus first # if none then focus fisrt one
 # Focus previous space
-ctrl + shift + cmd - q : yabai -m space --focus prev || yabai -m space --focus last # if none then focus last one
+ctrl + shift + cmd - q : yabai -m space --focus recent || yabai -m space --focus last # if none then focus last one
 
 # Focus a space, if target spcace not available then create one
 ctrl + shift + cmd - 1 : yabai -m space --focus 1 || yabai -m space --create
