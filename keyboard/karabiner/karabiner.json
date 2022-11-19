@@ -3974,6 +3974,41 @@
                 },
                 "rules": [
                     {
+                        "description": "left_shift to switch input sources",
+                        "manipulators": [
+                            {
+                                "type": "basic",
+                                "from": {
+                                    "key_code": "right_shift",
+                                    "modifiers": {
+                                        "optional": ["caps_lock"]
+                                    }
+                                },
+                                "parameters": {
+                                    "basic.to_if_alone_timeout_milliseconds": 200,
+                                    "basic.to_if_held_down_threshold_milliseconds": 200
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_shift",
+                                        "lazy": true
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "spacebar",
+                                        "modifiers": "control"
+                                    }
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "key_code": "left_shift"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
                         "description": "shift + space to window manager leader key",
                         "manipulators": [
                             {
