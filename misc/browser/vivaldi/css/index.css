@@ -1,0 +1,9 @@
+/* this file is used for customizing vivaldi style https://forum.vivaldi.net/topic/10549/modding-vivaldi*/
+/* hide the vivaldi titlebar https://forum.vivaldi.net/topic/7105/hide-title-bar/21?lang=en-US&page=2 */
+#header {
+  display: none !important;
+}
+
+#titlebar {
+  display: none !important;
+}
