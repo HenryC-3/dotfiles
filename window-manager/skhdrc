@@ -34,7 +34,7 @@ ctrl + shift + cmd - x : yabai -m window --toggle split
 
 # resize 1/10 screen size pre-operation based on 1920 x 1080 resolution laptop
 # #️⃣ resize evenly
-ctrl + shift + cmd - m : yabai -m space --balance
+ctrl + shift + cmd - b : yabai -m space --balance
 # ➡️ resize focused app windown size from right, if can't, do left
 ctrl + shift + cmd - a : yabai -m window --resize right:-192:0 || yabai -m window --resize left:192:0 
 ctrl + shift + cmd - d : yabai -m window --resize right:192:0 || yabai -m window --resize left:-192:0
