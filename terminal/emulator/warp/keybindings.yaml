@@ -10,7 +10,7 @@
 "workspace:decrease_font_size": cmd--
 "workspace:increase_font_size": cmd-=
 ## editor navigation
-"terminal:focus_input": shift-cmd-L #use this shortcut go back to terminal after search
+"terminal:focus_input": shift-cmd-E #use this shortcut go back to terminal after search
 ## tab navigation
 "workspace:move_tab_right": ctrl-shift-right
 "workspace:move_tab_left": ctrl-shift-left
