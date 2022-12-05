@@ -3974,10 +3974,9 @@
                 },
                 "rules": [
                     {
-                        "description": "left_shift to switch input sources",
+                        "description": "right_shift to switch input sources",
                         "manipulators": [
                             {
-                                "type": "basic",
                                 "from": {
                                     "key_code": "right_shift",
                                     "modifiers": {
@@ -3996,15 +3995,16 @@
                                 ],
                                 "to_if_alone": [
                                     {
-                                        "key_code": "spacebar",
+                                        "key_code": "escape",
                                         "modifiers": "control"
                                     }
                                 ],
                                 "to_if_held_down": [
                                     {
-                                        "key_code": "left_shift"
+                                        "key_code": "right_shift"
                                     }
-                                ]
+                                ],
+                                "type": "basic"
                             }
                         ]
                     },
