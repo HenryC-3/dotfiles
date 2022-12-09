@@ -50,7 +50,7 @@ yabai -m config window_gap                   4
 
 
 # use keyword "yabai" in raycast for execute script in @/misc/raycast/script-command
-yabai -m rule --add title="(Copy|Bin|About This Mac|Info)" manage=off
-yabai -m rule --add app="^(Discord|Slack|Activity Monitor|Logi Options+|Raycast|Ukelele|Calculator|VLC|System Preferences|XMind)$" manage=off
+yabai -m rule --add title="(Copy|Bin|About This Mac|Info|Installer)" manage=off
+yabai -m rule --add app="^(Discord|Slack|Activity Monitor|Logi Options+|Raycast|Ukelele|Calculator|VLC|System Preferences|XMind|ClashX Pro|QQ|Pomatez|Super Productivity|Input Source Pro|iShot|App Store|ScanScan|AltTab)$" manage=off
 
 echo "yabai configuration loaded.."
