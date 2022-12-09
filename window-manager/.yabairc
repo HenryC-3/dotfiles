@@ -74,11 +74,21 @@ function setup_space {
   yabai -m space "$idx" --label "$name"
 }
 
+
+# layout option 
+# 1. bsp: defautl layout, window resize when you create a new window.
+# 2. stack: windows are maximized and overlapped
 setup_space 1 workbench
+
 setup_space 2 reference
+yabai -m config --space 2 layout stack
+
 setup_space 3 schedule
 setup_space 4 config
+
 setup_space 5 misc
+yabai -m config --space 5 layout stack
+
 
 # NOTE: If you put “^” before space number, the space will be focused after application is started
 # match app, move app to space 3 on launching app
