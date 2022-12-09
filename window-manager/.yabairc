@@ -76,15 +76,16 @@ function setup_space {
 
 setup_space 1 workbench
 setup_space 2 reference
-setup_space 3 message
-setup_space 4 misc
-setup_space 5 config
+setup_space 3 schedule
+setup_space 4 config
+setup_space 5 misc
 
 # NOTE: If you put “^” before space number, the space will be focused after application is started
 # match app, move app to space 3 on launching app
-yabai -m rule --add app="^(QQ|Telegram|Mail|Discord|WeChat|Slack)$" space=^3
+yabai -m rule --add app="^(draw.io)$" space=^2
+yabai -m rule --add app="^(Things)$" space=^3
+yabai -m rule --add app="^(QQ|Telegram|Mail|Discord|WeChat|Slack|Motrix)$" space=^5
 # match title e.g. Youtube
 # yabai -m rule --add title="^()$" space=^3
-yabai -m rule --add app="^(Motrix)$" space=^4
 
 echo "yabai configuration loaded.."
