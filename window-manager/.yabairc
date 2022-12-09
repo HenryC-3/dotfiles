@@ -53,4 +53,38 @@ yabai -m config window_gap                   4
 yabai -m rule --add title="(Copy|Bin|About This Mac|Info|Installer)" manage=off
 yabai -m rule --add app="^(Discord|Slack|Activity Monitor|Logi Options+|Raycast|Ukelele|Calculator|VLC|System Preferences|XMind|ClashX Pro|QQ|Pomatez|Super Productivity|Input Source Pro|iShot|App Store|ScanScan|AltTab)$" manage=off
 
+# setup workspace credit: [Boris Buliga - Automatic setup of spaces with yabai](https://d12frosted.io/posts/2022-04-23-yabai-spaces.html)
+# makesure there are only 5 spaces
+for _ in $(yabai -m query --spaces | jq '.[].index | select(. > 5)'); do
+  yabai -m space --destroy 6
+done
+
+# label spaces
+function setup_space {
+  local idx="$1"
+  local name="$2"
+  local space=
+  echo "setup space $idx : $name"
+
+  space=$(yabai -m query --spaces --space "$idx")
+  if [ -z "$space" ]; then
+    yabai -m space --create
+  fi
+
+  yabai -m space "$idx" --label "$name"
+}
+
+setup_space 1 workbench
+setup_space 2 reference
+setup_space 3 message
+setup_space 4 misc
+setup_space 5 config
+
+# NOTE: If you put “^” before space number, the space will be focused after application is started
+# match app, move app to space 3 on launching app
+yabai -m rule --add app="^(QQ|Telegram|Mail|Discord|WeChat|Slack)$" space=^3
+# match title e.g. Youtube
+# yabai -m rule --add title="^()$" space=^3
+yabai -m rule --add app="^(Motrix)$" space=^4
+
 echo "yabai configuration loaded.."
