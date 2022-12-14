@@ -160,7 +160,7 @@
             "level": "off"
         }
     },
-    "editor.accessibilitySupport": "off",
+    "editor.accessibilitySupport": "on",
     "cSpell.userWords": [
         "alacritty",
         "antfu",
@@ -370,7 +370,6 @@
     "typescript.updateImportsOnFileMove.enabled": "always",
     "terminal.external.osxExec": "warp.app",
     "terminal.integrated.fontFamily": "MesloLGS NF",
-    "workbench.activityBar.visible": false,
     "tabnine.experimentalAutoImports": true,
     "javascript.updateImportsOnFileMove.enabled": "always",
     "workbench.iconTheme": "material-icon-theme",
@@ -393,12 +392,14 @@
     "terminal.integrated.smoothScrolling": true,
     "ghostText.notificationTimeout": 15,
     "typewriterAutoScroll.offset": 10,
-    "workbench.colorTheme": "Monokai Pro",
+    "workbench.colorTheme": "Moegi Dark Vitesse",
     "[yaml]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "pieces.launchPiecesOS": null,
     "window.zoomLevel": 1,
     "window.title": "${activeEditorShort}${separator}${rootPath}${separator}vscode",
-    "window.titleSeparator": " - "
+    "window.titleSeparator": " - ",
+    "workbench.activityBar.visible": false,
+    "workbench.statusBar.visible": false
 }
