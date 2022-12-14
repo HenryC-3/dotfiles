@@ -395,5 +395,7 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "pieces.launchPiecesOS": null,
-    "window.zoomLevel": 1
+    "window.zoomLevel": 1,
+    "window.title": "${activeEditorShort}${separator}${rootPath}${separator}vscode",
+    "window.titleSeparator": " - "
 }

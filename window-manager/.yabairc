@@ -31,7 +31,7 @@ yabai -m config window_animation_duration    0
 
 # window outline. use to differentiate active and inactive windows
 yabai -m config window_border                on
-yabai -m config active_window_border_color   0xffcef0cc #pale green
+yabai -m config active_window_border_color   f #pale green
 yabai -m config normal_window_border_color   0xff555555   
 yabai -m config window_border_width          2            
 yabai -m config window_border_radius         12         
@@ -97,5 +97,8 @@ yabai -m rule --add app="^(Things)$" space=^3
 yabai -m rule --add app="^(QQ|Telegram|Mail|Discord|WeChat|Slack|Motrix)$" space=^5
 # match title e.g. Youtube
 # yabai -m rule --add title="^()$" space=^3
+
+yabai -m rule --add title="(~/HH-workspace/dotfile - vscode)" space=^4
+yabai -m rule --add title="(~/Library/Mobile Documents/com~apple~CloudDocs/Dendron/Dendron-vault-main-20220309/dendron.code-workspace - vscode)" space=^2
 
 echo "yabai configuration loaded.."
