@@ -1,4 +1,7 @@
 {
+    "workbench.colorCustomizations": {
+        "focusBorder": "#f0c6e3cc"
+    },
     "vim.autoSwitchInputMethod.enable": true,
     "vim.autoSwitchInputMethod.obtainIMCmd": "/usr/local/bin/im-select",
     "vim.autoSwitchInputMethod.switchIMCmd": "/usr/local/bin/im-select {im}",
