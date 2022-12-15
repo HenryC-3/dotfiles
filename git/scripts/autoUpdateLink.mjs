@@ -22,7 +22,7 @@ const repositoryLocationsENV = [
     "GIT_DIR"
 ]
 
-// NOTE: make sure git commands execute successfully on other repos https://stackoverflow.com/questions/4043609/getting-fatal-not-a-git-repository-when-using-post-update-hook-to-execut/4532716#4532716
+// NOTE: remove env variables to make sure git commands on other repos execute successfully https://stackoverflow.com/questions/4043609/getting-fatal-not-a-git-repository-when-using-post-update-hook-to-execut/4532716#4532716
 repositoryLocationsENV.forEach((name) => {
     removeEnv(name)
 })
@@ -51,7 +51,13 @@ async function autoUpdateLink(
     if (!isCurrentPathSubmodule || isRootSuperProject) {
         return
     }
-    
+    console.log(chalk.green(`
+=====================================
+    updating module A in module B
+    A: ${currentPathStr} 
+    B: ${superProjectPathStr}
+=====================================
+    `))
     await updateLink(
         superProjectPathStr,
         submodulePathStr,

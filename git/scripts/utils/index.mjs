@@ -59,15 +59,19 @@ export async function updateLink(
     relSubmodulePathStr
 ) {
     const updateMsg = `auto update: ${relSubmodulePathStr}/`;
-    echo("-----------------------------update start-----------------------------")
     await $`git -C ${superProjectPathStr} add ${submodulePathStr}`;
     await $`git -C ${superProjectPathStr} commit -m ${updateMsg}`;
     try {
         await $`git -C ${superProjectPathStr} push origin master`;
+        console.log(chalk.green(`
+=========================================
+    update success    
+=========================================
+        `))
     } catch (error) {
-        console.log(chalk.yellow(error));
+        console.log(chalk.red(`${superProjectPathStr} push to origin master failed`))
+        console.log(chalk.red(error));
     }
-    echo("-----------------------------update end-----------------------------")
 }
 
 /**
