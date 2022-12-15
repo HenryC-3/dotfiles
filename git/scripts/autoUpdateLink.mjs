@@ -29,7 +29,7 @@ repositoryLocationsENV.forEach((name) => {
 
 
 try {
-    await autoUpdateLinkRecursively(submodulePathStr, rootSuperProjectPathStr);
+    await autoUpdateLink(submodulePathStr, rootSuperProjectPathStr);
 } catch (error) {
     console.log(chalk.red(error));
 }
@@ -39,38 +39,22 @@ try {
  * @param {string} currentPathStr path
  * @param {string} rootSuperProjectPathStr
  */
-async function autoUpdateLinkRecursively(
+async function autoUpdateLink(
     currentPathStr,
     rootSuperProjectPathStr
 ) {
     const { relSubmodulePathStr, superProjectPathStr, submodulePathStr } =
         await getSubmoduleInfo(currentPathStr);
 
-    const isCurrentPathSubmodule = await isSubmodule(currentPathStr);
-    const isSuperProjectSubmodule = await isSubmodule(superProjectPathStr);
-
-    // exit when folder is not a submodule
-    if (!isCurrentPathSubmodule) {
-        return;
+    const isCurrentPathSubmodule = await isSubmodule(currentPathStr); // exit when folder is not a submodule
+    const isRootSuperProject = rootSuperProjectPathStr ? rootSuperProjectPathStr === currentPathStr : false // exit when current submodule is root super-project
+    if (!isCurrentPathSubmodule || isRootSuperProject) {
+        return
     }
-
+    
     await updateLink(
         superProjectPathStr,
         submodulePathStr,
         relSubmodulePathStr
     );
-
-    // exit when super-project is not a submodule
-    if (!isSuperProjectSubmodule) {
-        return;
-    }
-
-    const isRootSuperProject = rootSuperProjectPathStr
-        ? superProjectPathStr === rootSuperProjectPathStr
-        : false;
-
-    // exit when super-project is root super-project
-    if (!isRootSuperProject) {
-        await autoUpdateLinkRecursively(superProjectPathStr, rootSuperProjectPathStr);
-    }
 }
