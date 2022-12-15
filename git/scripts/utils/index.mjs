@@ -6,7 +6,7 @@ export async function isSubmodule(absPath) {
     if (absPath) {
         const result =
             await $`git -C ${absPath} rev-parse --show-superproject-working-tree`;
-        return Boolean(result);
+        return Boolean(getStr(result));
     }
     return false;
 }
@@ -58,12 +58,28 @@ export async function updateLink(
     submodulePathStr,
     relSubmodulePathStr
 ) {
-    const updateMsg = `update: ${relSubmodulePathStr}/`;
+    const updateMsg = `auto update: ${relSubmodulePathStr}/`;
     await $`git -C ${superProjectPathStr} add ${submodulePathStr}`;
     await $`git -C ${superProjectPathStr} commit -m ${updateMsg}`;
     try {
         await $`git -C ${superProjectPathStr} push origin master`;
+        console.log(chalk.green(`
+=========================================
+    update success    
+=========================================
+        `))
     } catch (error) {
-        console.log(chalk.yellow(error));
+        console.log(chalk.red(`${superProjectPathStr} push to origin master failed`))
+        console.log(chalk.red(error));
     }
+}
+
+/**
+ * 
+ * @param {string} name environment variable name
+ * @returns {string} environment variable value
+ */
+export function removeEnv(name) {
+    delete $.env[name]
+    return $.env[name]
 }
