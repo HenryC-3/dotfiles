@@ -9,6 +9,7 @@
 [core]
 	excludesfile = /Users/henry/.gitignore_global
 	editor= code
+	hooksPath = /Users/henry/HH-workspace/dotfile/git/hooks
 [diff]
     tool = default-difftool
 [difftool "default-difftool"]
