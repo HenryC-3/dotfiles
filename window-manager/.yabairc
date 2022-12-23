@@ -78,28 +78,29 @@ function setup_space {
 # layout option 
 # 1. bsp: defautl layout, window resize when you create a new window.
 # 2. stack: windows are maximized and overlapped
-setup_space 1 workbench
+setup_space 1 references
+setup_space 2 workbench
+setup_space 3 favorite
+yabai -m config --space 3 layout stack
 
-setup_space 2 reference
-yabai -m config --space 2 layout stack
+setup_space 4 messgaes
+yabai -m config --space 4 layout stack
 
-setup_space 3 schedule
-setup_space 4 config
-
-setup_space 5 misc
-yabai -m config --space 5 layout stack
-
+setup_space 5 tasks
+setup_space 6 misc
 
 # NOTE: If you put “^” before space number, the space will be focused after application is started
-# space 2
-yabai -m rule --add app="^(draw.io|ChatGPT|Notion)$" space=^2
-yabai -m rule --add title="(~/Library/Mobile Documents/com~apple~CloudDocs/Dendron/Dendron-vault-main-20220309/dendron.code-workspace - vscode)" space=^2
-# space 3
-yabai -m rule --add app="^(Things)$" space=^3
-# space 4
-yabai -m rule --add title="(~/HH-workspace/dotfile - vscode)" space=^4
-# space 5
-yabai -m rule --add app="^(QQ|Telegram|Mail|Discord|WeChat|Slack|Motrix)$" space=^5
+# space 3 favorite
+yabai -m rule --add app="^(draw.io|ChatGPT|Notion)$" space=^3
+yabai -m rule --add title="(~/Library/Mobile Documents/com~apple~CloudDocs/Dendron/Dendron-vault-main-20220309/dendron.code-workspace - vscode)" space=^3
+yabai -m rule --add title="(~/HH-workspace/dotfile - vscode)" space=^3
+
+# space 4 messages
+yabai -m rule --add app="^(QQ|Telegram|Mail|Discord|WeChat|Slack)$" space=^4
+# space 5 tasks
+yabai -m rule --add app="^(Things)$" space=^5
+# space 6 misc
+yabai -m rule --add app="^(Motrix)$" space=^6
 
 
 echo "yabai configuration loaded.."
