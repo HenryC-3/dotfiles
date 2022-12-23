@@ -55,8 +55,8 @@ yabai -m rule --add app="^(Discord|Slack|Activity Monitor|Logi Options+|Raycast|
 
 # setup workspace credit: [Boris Buliga - Automatic setup of spaces with yabai](https://d12frosted.io/posts/2022-04-23-yabai-spaces.html)
 # makesure there are only 5 spaces
-for _ in $(yabai -m query --spaces | jq '.[].index | select(. > 5)'); do
-  yabai -m space --destroy 6
+for _ in $(yabai -m query --spaces | jq '.[].index | select(. > 6)'); do
+  yabai -m space --destroy 7
 done
 
 # label spaces
@@ -91,7 +91,7 @@ setup_space 6 misc
 
 # NOTE: If you put “^” before space number, the space will be focused after application is started
 # space 3 favorite
-yabai -m rule --add app="^(draw.io|ChatGPT|Notion)$" space=^3
+yabai -m rule --add app="^(draw.io|ChatGPT|Notion|linear)$" space=^3
 yabai -m rule --add title="(~/Library/Mobile Documents/com~apple~CloudDocs/Dendron/Dendron-vault-main-20220309/dendron.code-workspace - vscode)" space=^3
 yabai -m rule --add title="(~/HH-workspace/dotfile - vscode)" space=^3
 
