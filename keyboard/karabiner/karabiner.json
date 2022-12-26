@@ -408,7 +408,227 @@
                 },
                 "rules": [
                     {
-                        "description": "hyper + M to right click",
+                        "description": "right cmd to Super",
+                        "manipulators": [
+                            {
+                                "description": "right-ctrl = esc(click) | super(hold)",
+                                "from": {
+                                    "key_code": "right_command",
+                                    "modifiers": {
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_shift",
+                                        "modifiers": [
+                                            "right_command",
+                                            "right_control",
+                                            "right_option"
+                                        ]
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "escape"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Super window management",
+                        "manipulators": [
+                            {
+                                "description": "focus recent space",
+                                "from": {
+                                    "key_code": "tab",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command",
+                                            "right_control",
+                                            "right_shift",
+                                            "right_option",
+                                            "left_command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "/usr/local/bin/yabai -m space --focus recent"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "focus references space",
+                                "from": {
+                                    "key_code": "1",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command",
+                                            "right_control",
+                                            "right_shift",
+                                            "right_option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "/usr/local/bin/yabai -m space --focus 1"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "move window to references space",
+                                "from": {
+                                    "key_code": "1",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command",
+                                            "right_control",
+                                            "right_shift",
+                                            "right_option",
+                                            "left_command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "/usr/local/bin/yabai -m window --space 1 && /usr/local/bin/yabai -m space --focus 1"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "focus workbench space",
+                                "from": {
+                                    "key_code": "2",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command",
+                                            "right_control",
+                                            "right_shift",
+                                            "right_option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "/usr/local/bin/yabai -m space --focus 2"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "move window to workbench space",
+                                "from": {
+                                    "key_code": "2",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command",
+                                            "right_control",
+                                            "right_shift",
+                                            "right_option",
+                                            "left_command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "/usr/local/bin/yabai -m window --space 2 && /usr/local/bin/yabai -m space --focus 2"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "focus favorite space",
+                                "from": {
+                                    "key_code": "3",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command",
+                                            "right_control",
+                                            "right_shift",
+                                            "right_option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "/usr/local/bin/yabai -m space --focus 3"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "move window to favorite space",
+                                "from": {
+                                    "key_code": "3",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command",
+                                            "right_control",
+                                            "right_shift",
+                                            "right_option",
+                                            "left_command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "/usr/local/bin/yabai -m window --space 3 && /usr/local/bin/yabai -m space --focus 3"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "focus misc space",
+                                "from": {
+                                    "key_code": "4",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command",
+                                            "right_control",
+                                            "right_shift",
+                                            "right_option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "/usr/local/bin/yabai -m space --focus 6"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "move window to misc space",
+                                "from": {
+                                    "key_code": "4",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command",
+                                            "right_control",
+                                            "right_shift",
+                                            "right_option",
+                                            "left_command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "/usr/local/bin/yabai -m window --space 6 && /usr/local/bin/yabai -m space --focus 6"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "super + M to right click",
                         "manipulators": [
                             {
                                 "from": {
@@ -489,36 +709,6 @@
                                 "to_if_alone": [
                                     {
                                         "key_code": "spacebar"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "right-ctrl to Hyper",
-                        "manipulators": [
-                            {
-                                "description": "right-ctrl = esc(click) | hyper(hold)",
-                                "from": {
-                                    "key_code": "right_control",
-                                    "modifiers": {
-                                        "optional": ["any"]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "right_shift",
-                                        "modifiers": [
-                                            "right_command",
-                                            "right_control",
-                                            "right_option"
-                                        ]
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "escape"
                                     }
                                 ],
                                 "type": "basic"
@@ -1111,16 +1301,6 @@
                         },
                         {
                             "from": {
-                                "key_code": "left_command"
-                            },
-                            "to": [
-                                {
-                                    "key_code": "left_option"
-                                }
-                            ]
-                        },
-                        {
-                            "from": {
                                 "key_code": "left_control"
                             },
                             "to": [
@@ -1141,11 +1321,31 @@
                         },
                         {
                             "from": {
+                                "key_code": "right_control"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "right_option"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
                                 "key_code": "right_option"
                             },
                             "to": [
                                 {
-                                    "key_code": "right_control"
+                                    "key_code": "right_command"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "left_command"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "left_option"
                                 }
                             ]
                         }
