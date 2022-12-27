@@ -48,6 +48,12 @@ yabai -m config right_padding                0
 # gap between apps
 yabai -m config window_gap                   4
 
+# focus window after active space changes https://github.com/koekeishiya/yabai/issues/719#issuecomment-728140216
+yabai -m signal --add event=space_changed action="yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id)"
+
+# focus window after active display changes
+yabai -m signal --add event=display_changed action="yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id)"
+
 
 # use keyword "yabai" in raycast for execute script in @/misc/raycast/script-command
 yabai -m rule --add title="(Copy|Bin|About This Mac|Info|Installer)" manage=off
