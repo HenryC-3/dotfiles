@@ -1,22 +1,17 @@
-import { hyperNavigation } from "./profiles/caplock-enhance/hypeNavigation";
-import { getSpaceModifier, getArrow } from "./profiles/palmS/mapArrow";
-import { mapDeleteBackspace } from "./profiles/palmS/mapDeleteBackspace";
-import { mapRedoUndoCopyPaste } from "./profiles/caplock-enhance/mapRedoUndoCopyPaste";
 import {
     getRuleNavigation,
     getRuleSelect,
     getRuleDelete,
-} from "./profiles/thumbs/index";
+} from "./profiles/thumbs/superEdit";
 
-export const mapHyperNavigation = hyperNavigation;
-export const mapUndoRedoCopyPaste = mapRedoUndoCopyPaste;
-export const mapBackSpaceDelete = mapDeleteBackspace;
-export const mapArrow = {
-    getSpaceModifier,
-    getArrow,
-};
-export const thumbs = {
+import { getSuperWindowManagementJSON } from "./profiles/thumbs/superWindowManagement";
+
+export const superEdit = {
     getRuleNavigation,
     getRuleSelect,
     getRuleDelete,
+};
+
+export const superWindowManagement = {
+    getSuperWindowManagementJSON,
 };

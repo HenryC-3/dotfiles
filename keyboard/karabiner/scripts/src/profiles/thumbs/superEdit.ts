@@ -1,16 +1,10 @@
 import { karabinerFromKey, karabinerToKey } from "../../types";
 import {
-    getComplexRules,
-    getFromKey,
     getFromKeyWithHyper,
     getToKey,
-} from "../../utils";
+} from "../../utils/getKarabinerDataStructure";
+import { getComplexRules } from "../../utils/generateKarabinerJSON";
 import { arrowKey, deleteKey, modifiers } from "../../utils/keys";
-
-const mode = {
-    select: "left_command",
-    delete: "left_option",
-};
 
 type AnchorType =
     | "wordStart"
