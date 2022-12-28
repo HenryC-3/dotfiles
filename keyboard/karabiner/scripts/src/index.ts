@@ -2,7 +2,7 @@ import {
     getRuleNavigation,
     getRuleSelect,
     getRuleDelete,
-} from "./profiles/thumbs/index";
+} from "./profiles/thumbs";
 
 export const thumbs = {
     getRuleNavigation,

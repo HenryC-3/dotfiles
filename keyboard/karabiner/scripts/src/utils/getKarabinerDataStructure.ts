@@ -1,8 +1,6 @@
-import fs from "fs";
 import {
     karabinerCondition,
     karabinerFromKey,
-    karabinerRule,
     karabinerRuleWithCondition,
     karabinerToKey,
 } from "../types";
@@ -43,33 +41,6 @@ export function getCustomModifier(keycode: string) {
     };
 }
 
-export async function getComplexRules<
-    T extends { [index: string]: karabinerToKey },
-    F extends { [index: string]: karabinerFromKey }
->(
-    to: T,
-    from: F,
-    path: string = `/Users/henry/HH-workspace/dotfile/keyboard/karabiner/scripts/workbench/karabiner-rules/${Date.now()}.json`,
-    conditions: Array<karabinerCondition> = []
-) {
-    const rules: karabinerRule[] = [];
-    Object.keys(from).forEach((key: string) => {
-        const rule = getKarabinerRule(
-            key.split(".").join("-"),
-            from[key],
-            to[key],
-            conditions
-        );
-        rules.push(rule);
-    });
-    try {
-        await getJSONFIle(rules, path);
-    } catch (error) {
-        console.log(error);
-    }
-    return rules;
-}
-
 export function getKarabinerRule(
     desc: string,
     fromKey: karabinerFromKey,
@@ -83,21 +54,6 @@ export function getKarabinerRule(
         type: "basic",
         conditions,
     };
-}
-
-/**
- * https://stackoverflow.com/a/31777314/10915537
- */
-export async function getJSONFIle(data: Object, path: string) {
-    await fs.writeFile(
-        path,
-        JSON.stringify(data),
-        { flag: "wx" },
-        function (err) {
-            if (err) throw err;
-            console.log(`File saved in ${path}`);
-        }
-    );
 }
 
 export function getToKey(keycode: string, modifiers: Array<string> = []) {

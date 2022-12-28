@@ -1,4 +1,3 @@
-import { Anchors } from "./profiles/caplock-enhance/hypeNavigation/types";
 export interface karabinerRule {
     description: string;
     from: karabinerFromKey;
@@ -27,5 +26,3 @@ export interface karabinerToKey {
     key_code: string;
     modifiers?: Array<string> | string;
 }
-
-export type { Anchors };
