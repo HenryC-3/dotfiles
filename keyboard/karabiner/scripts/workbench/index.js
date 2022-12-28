@@ -1,8 +1,5 @@
 import {
-    mapUndoRedoCopyPaste,
-    mapBackSpaceDelete,
-    mapArrow,
-    thumbs,
+    superWindowManagement
 } from "../dist/my-lib.mjs";
 
-thumbs.getRuleDelete();
+superWindowManagement.getSuperWindowManagementJSON()

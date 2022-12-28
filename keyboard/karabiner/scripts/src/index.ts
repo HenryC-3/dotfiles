@@ -4,8 +4,14 @@ import {
     getRuleDelete,
 } from "./profiles/thumbs/superEdit";
 
-export const thumbs = {
+import { getSuperWindowManagementJSON } from "./profiles/thumbs/superWindowManagement";
+
+export const superEdit = {
     getRuleNavigation,
     getRuleSelect,
     getRuleDelete,
+};
+
+export const superWindowManagement = {
+    getSuperWindowManagementJSON,
 };

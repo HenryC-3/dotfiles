@@ -23,6 +23,7 @@ export interface karabinerFromKey {
 }
 
 export interface karabinerToKey {
-    key_code: string;
+    key_code?: string;
+    shell_command?: string;
     modifiers?: Array<string> | string;
 }

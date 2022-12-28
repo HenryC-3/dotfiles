@@ -441,7 +441,279 @@
                         "description": "Super window management",
                         "manipulators": [
                             {
-                                "description": "focus recent space",
+                                "description": "focusSpace1",
+                                "from": {
+                                    "key_code": "1",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command",
+                                            "right_control",
+                                            "right_shift",
+                                            "right_option"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/focusSpace1.mjs"
+                                },
+                                "type": "basic",
+                                "conditions": []
+                            },
+                            {
+                                "description": "focusSpace2",
+                                "from": {
+                                    "key_code": "2",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command",
+                                            "right_control",
+                                            "right_shift",
+                                            "right_option"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/focusSpace2.mjs"
+                                },
+                                "type": "basic",
+                                "conditions": []
+                            },
+                            {
+                                "description": "focusSpace3",
+                                "from": {
+                                    "key_code": "3",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command",
+                                            "right_control",
+                                            "right_shift",
+                                            "right_option"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/focusSpace3.mjs"
+                                },
+                                "type": "basic",
+                                "conditions": []
+                            },
+                            {
+                                "description": "focusSpace6",
+                                "from": {
+                                    "key_code": "4",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command",
+                                            "right_control",
+                                            "right_shift",
+                                            "right_option"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/focusSpace6.mjs"
+                                },
+                                "type": "basic",
+                                "conditions": []
+                            },
+                            {
+                                "description": "focusSpaceRecent",
+                                "from": {
+                                    "key_code": "tab",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command",
+                                            "right_control",
+                                            "right_shift",
+                                            "right_option"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/focusSpaceRecent.mjs"
+                                },
+                                "type": "basic",
+                                "conditions": []
+                            },
+                            {
+                                "description": "focusWindowFirst",
+                                "from": {
+                                    "key_code": "j",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command",
+                                            "right_control",
+                                            "right_shift",
+                                            "right_option"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/focusWindowFirst.mjs"
+                                },
+                                "type": "basic",
+                                "conditions": []
+                            },
+                            {
+                                "description": "focusWindowCounterClockwise",
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command",
+                                            "right_control",
+                                            "right_shift",
+                                            "right_option"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/focusWindowCounterClockwise.mjs"
+                                },
+                                "type": "basic",
+                                "conditions": []
+                            },
+                            {
+                                "description": "focusWindowClockwise",
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command",
+                                            "right_control",
+                                            "right_shift",
+                                            "right_option"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/focusWindowClockwise.mjs"
+                                },
+                                "type": "basic",
+                                "conditions": []
+                            },
+                            {
+                                "description": "moveWindowToSpace1",
+                                "from": {
+                                    "key_code": "1",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command",
+                                            "right_control",
+                                            "right_shift",
+                                            "right_option",
+                                            "left_command"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/moveWindowToSpace1.mjs"
+                                },
+                                "type": "basic",
+                                "conditions": []
+                            },
+                            {
+                                "description": "moveWindowToSpace2",
+                                "from": {
+                                    "key_code": "2",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command",
+                                            "right_control",
+                                            "right_shift",
+                                            "right_option",
+                                            "left_command"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/moveWindowToSpace2.mjs"
+                                },
+                                "type": "basic",
+                                "conditions": []
+                            },
+                            {
+                                "description": "moveWindowToSpace3",
+                                "from": {
+                                    "key_code": "3",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command",
+                                            "right_control",
+                                            "right_shift",
+                                            "right_option",
+                                            "left_command"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/moveWindowToSpace3.mjs"
+                                },
+                                "type": "basic",
+                                "conditions": []
+                            },
+                            {
+                                "description": "moveWindowToSpace6",
+                                "from": {
+                                    "key_code": "4",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command",
+                                            "right_control",
+                                            "right_shift",
+                                            "right_option",
+                                            "left_command"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/moveWindowToSpace6.mjs"
+                                },
+                                "type": "basic",
+                                "conditions": []
+                            },
+                            {
+                                "description": "swapWindowVertical",
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command",
+                                            "right_control",
+                                            "right_shift",
+                                            "right_option",
+                                            "left_command"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/swapWindowVertical.mjs"
+                                },
+                                "type": "basic",
+                                "conditions": []
+                            },
+                            {
+                                "description": "swapWindowHorizontal",
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command",
+                                            "right_control",
+                                            "right_shift",
+                                            "right_option",
+                                            "left_command"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/swapWindowHorizontal.mjs"
+                                },
+                                "type": "basic",
+                                "conditions": []
+                            },
+                            {
+                                "description": "toggleLayoutType",
                                 "from": {
                                     "key_code": "tab",
                                     "modifiers": {
@@ -454,176 +726,91 @@
                                         ]
                                     }
                                 },
-                                "to": [
-                                    {
-                                        "shell_command": "/usr/local/bin/yabai -m space --focus recent"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "focus references space",
-                                "from": {
-                                    "key_code": "1",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_command",
-                                            "right_control",
-                                            "right_shift",
-                                            "right_option"
-                                        ]
-                                    }
+                                "to": {
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/toggleLayoutType.mjs"
                                 },
-                                "to": [
-                                    {
-                                        "shell_command": "/usr/local/bin/yabai -m space --focus 1"
-                                    }
-                                ],
-                                "type": "basic"
+                                "type": "basic",
+                                "conditions": []
                             },
                             {
-                                "description": "move window to references space",
+                                "description": "decreaseWindowHeight",
                                 "from": {
-                                    "key_code": "1",
+                                    "key_code": "j",
                                     "modifiers": {
                                         "mandatory": [
                                             "right_command",
                                             "right_control",
                                             "right_shift",
                                             "right_option",
-                                            "left_command"
+                                            "left_option"
                                         ]
                                     }
                                 },
-                                "to": [
-                                    {
-                                        "shell_command": "/usr/local/bin/yabai -m window --space 1 && /usr/local/bin/yabai -m space --focus 1"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "focus workbench space",
-                                "from": {
-                                    "key_code": "2",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_command",
-                                            "right_control",
-                                            "right_shift",
-                                            "right_option"
-                                        ]
-                                    }
+                                "to": {
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/decreaseWindowHeight.mjs"
                                 },
-                                "to": [
-                                    {
-                                        "shell_command": "/usr/local/bin/yabai -m space --focus 2"
-                                    }
-                                ],
-                                "type": "basic"
+                                "type": "basic",
+                                "conditions": []
                             },
                             {
-                                "description": "move window to workbench space",
+                                "description": "decreaseWindowWidth",
                                 "from": {
-                                    "key_code": "2",
+                                    "key_code": "k",
                                     "modifiers": {
                                         "mandatory": [
                                             "right_command",
                                             "right_control",
                                             "right_shift",
                                             "right_option",
-                                            "left_command"
+                                            "left_option"
                                         ]
                                     }
                                 },
-                                "to": [
-                                    {
-                                        "shell_command": "/usr/local/bin/yabai -m window --space 2 && /usr/local/bin/yabai -m space --focus 2"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "focus favorite space",
-                                "from": {
-                                    "key_code": "3",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_command",
-                                            "right_control",
-                                            "right_shift",
-                                            "right_option"
-                                        ]
-                                    }
+                                "to": {
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/decreaseWindowWidth.mjs"
                                 },
-                                "to": [
-                                    {
-                                        "shell_command": "/usr/local/bin/yabai -m space --focus 3"
-                                    }
-                                ],
-                                "type": "basic"
+                                "type": "basic",
+                                "conditions": []
                             },
                             {
-                                "description": "move window to favorite space",
+                                "description": "increaseWindowHeight",
                                 "from": {
-                                    "key_code": "3",
+                                    "key_code": "semicolon",
                                     "modifiers": {
                                         "mandatory": [
                                             "right_command",
                                             "right_control",
                                             "right_shift",
                                             "right_option",
-                                            "left_command"
+                                            "left_option"
                                         ]
                                     }
                                 },
-                                "to": [
-                                    {
-                                        "shell_command": "/usr/local/bin/yabai -m window --space 3 && /usr/local/bin/yabai -m space --focus 3"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "focus misc space",
-                                "from": {
-                                    "key_code": "4",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_command",
-                                            "right_control",
-                                            "right_shift",
-                                            "right_option"
-                                        ]
-                                    }
+                                "to": {
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/increaseWindowHeight.mjs"
                                 },
-                                "to": [
-                                    {
-                                        "shell_command": "/usr/local/bin/yabai -m space --focus 6"
-                                    }
-                                ],
-                                "type": "basic"
+                                "type": "basic",
+                                "conditions": []
                             },
                             {
-                                "description": "move window to misc space",
+                                "description": "increaseWindowWidth",
                                 "from": {
-                                    "key_code": "4",
+                                    "key_code": "l",
                                     "modifiers": {
                                         "mandatory": [
                                             "right_command",
                                             "right_control",
                                             "right_shift",
                                             "right_option",
-                                            "left_command"
+                                            "left_option"
                                         ]
                                     }
                                 },
-                                "to": [
-                                    {
-                                        "shell_command": "/usr/local/bin/yabai -m window --space 6 && /usr/local/bin/yabai -m space --focus 6"
-                                    }
-                                ],
-                                "type": "basic"
+                                "to": {
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/increaseWindowWidth.mjs"
+                                },
+                                "type": "basic",
+                                "conditions": []
                             }
                         ]
                     },
