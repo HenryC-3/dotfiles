@@ -2,7 +2,7 @@ import {
     getRuleNavigation,
     getRuleSelect,
     getRuleDelete,
-} from "./profiles/thumbs";
+} from "./profiles/thumbs/superEdit";
 
 export const thumbs = {
     getRuleNavigation,
