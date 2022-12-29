@@ -2,47 +2,14 @@ import { existsSync } from "fs";
 import {
     getFromKeyWithHyper,
     getKarabinerRule,
-} from "../../utils/getKarabinerDataStructure";
+} from "../../../utils/getKarabinerDataStructure";
 import { join } from "path";
-import type { karabinerFromKey, karabinerRule } from "../../types";
-import { getJSONFIle } from "../../utils/generateKarabinerJSON";
+import type { karabinerFromKey, karabinerRule } from "../../../types";
+import { getJSONFIle } from "../../../utils/generateKarabinerJSON";
+import { keybindings } from "./keybindings";
 
 const scriptDir =
     "/Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows";
-
-// 通过该 Object 查看操作对应的快捷键
-// 以 focusSpace1 为例，其快捷键为 super + 1
-const keybindings = {
-    super: {
-        focusSpace1: "1",
-        focusSpace2: "2",
-        focusSpace3: "3",
-        focusSpace6: "4",
-        focusSpaceRecent: "tab",
-        focusWindowFirst: "j",
-        focusWindowCounterClockwise: "k", // prev window
-        focusWindowClockwise: "l", // next window
-    },
-    superCmd: {
-        moveWindowToSpace1: "1",
-        moveWindowToSpace2: "2",
-        moveWindowToSpace3: "3",
-        moveWindowToSpace6: "4",
-        swapWindowVertical: "k",
-        swapWindowHorizontal: "l",
-        toggleLayoutType: "tab",
-    },
-    superOpt: {
-        // rotateLayout: "n",
-        // toggleLayoutDirection: "x",
-        // toggleLayoutEvenly: "b",
-        // toggleWindowCenter: "c",
-        decreaseWindowHeight: "j",
-        decreaseWindowWidth: "k",
-        increaseWindowHeight: "semicolon",
-        increaseWindowWidth: "l",
-    },
-};
 
 export function getSuperWindowManagementJSON() {
     let rules = generateRules(keybindings.super, getFromKeyWithHyper);

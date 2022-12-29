@@ -4,7 +4,7 @@ import {
     getRuleDelete,
 } from "./profiles/thumbs/superEdit";
 
-import { getSuperWindowManagementJSON } from "./profiles/thumbs/superWindowManagement";
+import { getSuperWindowManagementJSON } from "./profiles/thumbs/superWindowManagement/generator";
 
 export const superEdit = {
     getRuleNavigation,
