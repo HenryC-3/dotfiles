@@ -54,6 +54,8 @@ yabai -m signal --add event=space_changed action="yabai -m window --focus \$(yab
 # focus window after active display changes
 yabai -m signal --add event=display_changed action="yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id)"
 
+# focus first window after active window closed
+yabai -m signal --add event=window_destroyed action="yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id)"
 
 # use keyword "yabai" in raycast for execute script in @/misc/raycast/script-command
 yabai -m rule --add title="(Copy|Bin|About This Mac|Info|Installer)" manage=off
