@@ -10,17 +10,17 @@ export const keybindings = {
         focusSpace3: "3",
         focusSpace6: "4",
         focusSpaceRecent: "tab",
-        focusWindowFirst: "j",
-        focusWindowCounterClockwise: "k",
-        focusWindowClockwise: "l", // next window
+        focusWindowCounterClockwise: "j",
+        focusWindowClockwise: "k", // next window
+        focusWindowFirst: "l",
     },
     superCmd: {
         moveWindowToSpace1: "1",
         moveWindowToSpace2: "2",
         moveWindowToSpace3: "3",
         moveWindowToSpace6: "4",
-        swapWindowVertical: "k",
-        swapWindowHorizontal: "l",
+        swapWindowVertical: "j",
+        swapWindowHorizontal: "k",
         toggleLayoutType: "tab",
     },
     superOpt: {
@@ -28,9 +28,9 @@ export const keybindings = {
         // toggleLayoutDirection: "x",
         // toggleLayoutEvenly: "b",
         // toggleWindowCenter: "c",
-        decreaseWindowHeight: "j",
-        decreaseWindowWidth: "k",
-        increaseWindowHeight: "semicolon",
-        increaseWindowWidth: "l",
+        increaseWindowHeight: "j",
+        decreaseWindowHeight: "n",
+        increaseWindowWidth: "k",
+        decreaseWindowWidth: "m",
     },
 };

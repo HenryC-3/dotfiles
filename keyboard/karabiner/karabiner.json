@@ -582,7 +582,7 @@
                             {
                                 "description": "focusWindowFirst",
                                 "from": {
-                                    "key_code": "j",
+                                    "key_code": "l",
                                     "modifiers": {
                                         "mandatory": [
                                             "right_command",
@@ -601,7 +601,7 @@
                             {
                                 "description": "focusWindowCounterClockwise",
                                 "from": {
-                                    "key_code": "k",
+                                    "key_code": "j",
                                     "modifiers": {
                                         "mandatory": [
                                             "right_command",
@@ -620,7 +620,7 @@
                             {
                                 "description": "focusWindowClockwise",
                                 "from": {
-                                    "key_code": "l",
+                                    "key_code": "k",
                                     "modifiers": {
                                         "mandatory": [
                                             "right_command",
@@ -719,7 +719,7 @@
                             {
                                 "description": "swapWindowVertical",
                                 "from": {
-                                    "key_code": "k",
+                                    "key_code": "j",
                                     "modifiers": {
                                         "mandatory": [
                                             "right_command",
@@ -739,7 +739,7 @@
                             {
                                 "description": "swapWindowHorizontal",
                                 "from": {
-                                    "key_code": "l",
+                                    "key_code": "k",
                                     "modifiers": {
                                         "mandatory": [
                                             "right_command",
@@ -779,7 +779,7 @@
                             {
                                 "description": "decreaseWindowHeight",
                                 "from": {
-                                    "key_code": "j",
+                                    "key_code": "n",
                                     "modifiers": {
                                         "mandatory": [
                                             "right_command",
@@ -799,7 +799,7 @@
                             {
                                 "description": "decreaseWindowWidth",
                                 "from": {
-                                    "key_code": "k",
+                                    "key_code": "m",
                                     "modifiers": {
                                         "mandatory": [
                                             "right_command",
@@ -819,7 +819,7 @@
                             {
                                 "description": "increaseWindowHeight",
                                 "from": {
-                                    "key_code": "semicolon",
+                                    "key_code": "j",
                                     "modifiers": {
                                         "mandatory": [
                                             "right_command",
@@ -839,7 +839,7 @@
                             {
                                 "description": "increaseWindowWidth",
                                 "from": {
-                                    "key_code": "l",
+                                    "key_code": "k",
                                     "modifiers": {
                                         "mandatory": [
                                             "right_command",
