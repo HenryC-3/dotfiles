@@ -3,10 +3,10 @@ import { defaultResizeWidth } from "../utils/parameters.mjs"
 
 increaseWindowWidth()
 
-export function increaseWindowWidth() {
+export async function increaseWindowWidth() {
     try {
-        resizeWindow("right", `${defaultResizeWidth}:0`)
+        await resizeWindow("right", `${defaultResizeWidth}:0`)
     } catch (error) {
-        resizeWindow("left", `-${defaultResizeWidth}:0`)
+        await resizeWindow("left", `-${defaultResizeWidth}:0`)
     }
 }

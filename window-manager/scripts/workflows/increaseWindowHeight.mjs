@@ -3,10 +3,10 @@ import { defaultResizeHeight } from "../utils/parameters.mjs"
 
 increaseWindowHeight()
 
-export function increaseWindowHeight() {
+export async function increaseWindowHeight() {
     try {
-        resizeWindow("top", `0:-${defaultResizeHeight}`)
+        await resizeWindow("top", `0:-${defaultResizeHeight}`)
     } catch (error) {
-        resizeWindow("bottom", `0:${defaultResizeHeight}`)
+        await resizeWindow("bottom", `0:${defaultResizeHeight}`)
     }
 }
