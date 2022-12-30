@@ -561,6 +561,25 @@
                                 "conditions": []
                             },
                             {
+                                "description": "focusSpace5",
+                                "from": {
+                                    "key_code": "5",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command",
+                                            "right_control",
+                                            "right_shift",
+                                            "right_option"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/focusSpace5.mjs"
+                                },
+                                "type": "basic",
+                                "conditions": []
+                            },
+                            {
                                 "description": "focusSpaceRecent",
                                 "from": {
                                     "key_code": "tab",
@@ -712,6 +731,26 @@
                                 },
                                 "to": {
                                     "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/moveWindowToSpace6.mjs"
+                                },
+                                "type": "basic",
+                                "conditions": []
+                            },
+                            {
+                                "description": "moveWindowToSpace5",
+                                "from": {
+                                    "key_code": "5",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command",
+                                            "right_control",
+                                            "right_shift",
+                                            "right_option",
+                                            "left_command"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/moveWindowToSpace5.mjs"
                                 },
                                 "type": "basic",
                                 "conditions": []

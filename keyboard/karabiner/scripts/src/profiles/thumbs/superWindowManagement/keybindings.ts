@@ -9,6 +9,7 @@ export const keybindings = {
         focusSpace2: "2",
         focusSpace3: "3",
         focusSpace6: "4",
+        focusSpace5: "5",
         focusSpaceRecent: "tab",
         focusWindowCounterClockwise: "j",
         focusWindowClockwise: "k", // next window
@@ -19,6 +20,7 @@ export const keybindings = {
         moveWindowToSpace2: "2",
         moveWindowToSpace3: "3",
         moveWindowToSpace6: "4",
+        moveWindowToSpace5: "5",
         swapWindowVertical: "j",
         swapWindowHorizontal: "k",
         toggleLayoutType: "tab",
