@@ -54,8 +54,9 @@ yabai -m signal --add event=space_changed action="yabai -m window --focus \$(yab
 # focus window after active display changes
 yabai -m signal --add event=display_changed action="yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id)"
 
-# focus first window after active window closed
-yabai -m signal --add event=window_destroyed action="yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id)"
+# credits https://github.com/koekeishiya/dotfiles/blob/master/yabai/yabairc
+yabai -m signal --add event=window_destroyed active=yes action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse &> /dev/null || yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id) &> /dev/null"
+yabai -m signal --add event=window_minimized active=yes action="if \$(yabai -m query --windows --window \$YABAI_WINDOW_ID | jq -r '.\"is-floating\"'); then yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse &> /dev/null || yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id) &> /dev/null; fi"
 
 # use keyword "yabai" in raycast for execute script in @/misc/raycast/script-command
 yabai -m rule --add title="(Copy|Bin|About This Mac|Info|Installer)" manage=off
