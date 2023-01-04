@@ -54,15 +54,6 @@ vol() {
   volta list --format=plain > "${ICLOUD_HOME}/Volta/.volta"
 }
 
-# update the submodule link in super-project recursivly after commit in submodule.
-# why dont use git post-commit? see  [Cannot trigger post-commit git hook on git submodule - Stack Overflow](https://stackoverflow.com/questions/36196548/cannot-trigger-post-commit-git-hook-on-git-submodule/36216851#36216851)
-gcm(){
-  git commit -m "$@"
-  echo "update submodule link in super-project"
-  zx /Users/henry/HH-workspace/dotfile/git/scripts/autoUpdateLink.mjs
-  echo "done"
-}
-
 source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
