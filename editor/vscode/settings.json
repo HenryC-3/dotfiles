@@ -387,19 +387,21 @@
     "outline-map.enableAutomaticIndentReduction": true,
     "outline-map.follow": "viewport",
     "outline-map.maxDepth": 2000,
-    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.multiCursorModifier": "ctrlOpt",
     "workbench.layoutControl.enabled": false,
     "terminal.integrated.smoothScrolling": true,
     "ghostText.notificationTimeout": 15,
     "typewriterAutoScroll.offset": 10,
-    "workbench.colorTheme": "Moegi Dark Vitesse",
+    "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
     "[yaml]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "pieces.launchPiecesOS": null,
-    "window.zoomLevel": 1,
     "window.title": "${activeEditorShort}${separator}${rootPath}${separator}vscode",
     "window.titleSeparator": " - ",
-    "workbench.activityBar.visible": false,
-    "workbench.statusBar.visible": false
+    "vscode-nested-tags.additionalFileTypes": ["js"],
+    "sync.autoUpload": true,
+    "sync.forceUpload": true,
+    "sync.gist": "6c0eb8c402bf0e690a4c8a09e787f9df",
+    "sync.quietSync": true
 }
