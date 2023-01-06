@@ -408,6 +408,30 @@
                 },
                 "rules": [
                     {
+                        "description": "Quick access apps",
+                        "manipulators": [
+                            {
+                                "description": "focus snippet manager",
+                                "from": {
+                                    "key_code": "v",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command",
+                                            "right_control",
+                                            "right_shift",
+                                            "right_option"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "shell_command": "/usr/local/bin/code '/Users/henry/Library/Mobile Documents/com~apple~CloudDocs/Snippets'"
+                                },
+                                "type": "basic",
+                                "conditions": []
+                            }
+                        ]
+                    },
+                    {
                         "description": "right cmd to Super",
                         "manipulators": [
                             {
