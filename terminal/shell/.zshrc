@@ -39,8 +39,12 @@ alias cnpm="npm --registry=https://registry.npmmirror.com \
 --cache=$HOME/.npm/.cache/cnpm \
 --disturl=https://npmmirror.com/mirrors/node \
 --userconfig=$HOME/.cnpmrc"
-alias proxy='export all_proxy=socks5://127.0.0.1:7890'
-alias unproxy='unset all_proxy'
+alias proxy='export https_proxy=http://127.0.0.1:7890  && export http_proxy=http://127.0.0.1:7890 && export all_proxy=socks5://127.0.0.1:7890'
+alias unproxy='unset all_proxy && unset https_porxy && unset http_porxy'
+
+export https_proxy=http://127.0.0.1:7890 
+export http_proxy=http://127.0.0.1:7890 
+export all_proxy=socks5://127.0.0.1:7890
 
 # update `Brewfile` in icloud after execute `brew install` or `brew install`
 export HOMEBREW_BREWFILE=~/Library/Mobile\ Documents/com~apple~CloudDocs/Homebrew/Brewfile # specifiy Brewfile location
