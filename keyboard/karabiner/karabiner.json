@@ -428,6 +428,25 @@
                                 },
                                 "type": "basic",
                                 "conditions": []
+                            },
+                            {
+                                "description": "focus dotfiles",
+                                "from": {
+                                    "key_code": "6",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command",
+                                            "right_control",
+                                            "right_shift",
+                                            "right_option"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "shell_command": "/usr/local/bin/code '/Users/henry/HH-workspace/dotfile'"
+                                },
+                                "type": "basic",
+                                "conditions": []
                             }
                         ]
                     },
