@@ -1,4 +1,3 @@
 #!/bin/sh
 
-# use --quite option to show less output infomation
-zx ~/HH-workspace/dotfile/git/scripts/autoUpdateLink.mjs
+node /Users/henry/Downloads/repos/repo-manager/dist/scripts/index.js
