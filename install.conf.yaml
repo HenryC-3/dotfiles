@@ -14,7 +14,6 @@
 # create symlink in target directory
 # full options https://github.com/anishathalye/dotbot#link
 - link:
-      ~/Library/Application Support/Code/User/settings.json: ./editor/vscode/settings.json 
       ~/.warp/keybindings.yaml: ./terminal/emulator/warp/keybindings.yaml
       ~/.tmux.conf: ./terminal/feature/tmux/.tmux.conf
       ~/.config/nvim: ./editor/nvim

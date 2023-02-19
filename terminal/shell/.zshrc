@@ -21,7 +21,7 @@ plugins=(
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 export VISUAL="nvim"
-export EDITOR="code --wait"
+export EDITOR="code"
 export ICLOUD_HOME="$HOME/Library/Mobile Documents/com~apple~CloudDocs"
 export PATH=/usr/local/Cellar/mongodb-community-shell/4.2.0/bin:$PATH # mongodb
 export VOLTA_HOME="$HOME/.volta" # volta
@@ -40,7 +40,7 @@ alias cnpm="npm --registry=https://registry.npmmirror.com \
 --disturl=https://npmmirror.com/mirrors/node \
 --userconfig=$HOME/.cnpmrc"
 alias proxy='export https_proxy=http://127.0.0.1:7890  && export http_proxy=http://127.0.0.1:7890 && export all_proxy=socks5://127.0.0.1:7890'
-alias unproxy='unset all_proxy && unset https_porxy && unset http_porxy'
+alias unproxy='unset all_proxy && unset https_proxy && unset http_proxy'
 
 export https_proxy=http://127.0.0.1:7890 
 export http_proxy=http://127.0.0.1:7890 

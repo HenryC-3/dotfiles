@@ -8,7 +8,7 @@
 	email = 2324375439@qq.com
 [core]
 	excludesfile = /Users/henry/.gitignore_global
-	editor= code
+	editor = code --wait
 	hooksPath = /Users/henry/HH-workspace/dotfile/git/hooks
 [diff]
     tool = default-difftool
