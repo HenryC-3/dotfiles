@@ -7,7 +7,7 @@ sudo yabai --load-sa
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 
 # general
-yabai -m config mouse_follows_focus          off
+yabai -m config mouse_follows_focus          on
 yabai -m config focus_follows_mouse          off
 yabai -m config window_origin_display        default
 yabai -m config window_placement             second_child
@@ -94,9 +94,7 @@ setup_space 2 favorite
 yabai -m config --space 2 layout stack
 
 setup_space 3 workbench
-
 setup_space 4 references
-
 setup_space 5 tasks
 setup_space 6 misc
 
@@ -105,7 +103,7 @@ setup_space 6 misc
 yabai -m rule --add app="^(QQ|Telegram|Mail|Discord|WeChat|Slack)$" space=^1
 
 # space 2 favorite
-yabai -m rule --add app="^(draw.io|ChatGPT|Notion|linear)$" space=^2
+yabai -m rule --add app="^(draw.io|ChatGPT|linear)$" space=^2
 yabai -m rule --add title="(~/Library/Mobile Documents/com~apple~CloudDocs/Dendron/Dendron-vault-main-20220309/dendron.code-workspace - vscode)" space=^2
 yabai -m rule --add title="(~/HH-workspace/dotfile - vscode)" space=^2
 
