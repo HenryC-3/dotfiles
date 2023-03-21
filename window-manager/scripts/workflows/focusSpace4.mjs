@@ -1,4 +1,4 @@
 import { focusSpace, notifySpaceId } from "../utils/actions.mjs";
 
-await focusSpace(3);
-await notifySpaceId(3, "Workbench");
+await focusSpace(4);
+await notifySpaceId(4, "References");

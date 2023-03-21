@@ -1,4 +1,4 @@
-import { focusSpace, notifySpaceId } from "../utils/actions.mjs"
+import { focusSpace, notifySpaceId } from "../utils/actions.mjs";
 
-await focusSpace(6)
-await notifySpaceId(6, "Misc")
+await focusSpace(6);
+await notifySpaceId(6, "Misc");
