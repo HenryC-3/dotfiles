@@ -1,3 +1,3 @@
 #!/bin/sh
 
-node /Users/henry/Downloads/repos/repo-manager/dist/scripts/index.js
+node /Users/henry/.volta/tools/image/packages/repo-steward/lib/node_modules/repo-steward/dist/scripts/index.js
