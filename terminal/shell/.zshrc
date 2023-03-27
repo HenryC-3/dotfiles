@@ -1,12 +1,14 @@
 # 👀 stay close to the top for enable Powerlevel10k instant prompt
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi
 
 # 👀 zoxide replacement of cd/autojump commands
 eval "$(zoxide init zsh)" # https://github.com/ajeetdsouza/zoxide#step-2-add-zoxide-to-your-shell
 # 👀 navi shell widget 
 eval "$(navi widget zsh)" # https://github.com/denisidoro/navi/blob/master/docs/installation.md#installing-the-shell-widget
+# starship theme
+eval "$(starship init zsh)" # [starship/starship: ☄🌌️ The minimal, blazing-fast, and infinitely customizable prompt for any shell!](https://github.com/starship/starship#step-2-setup-your-shell-to-use-starship)
 
 export ZSH="/Users/henry/.oh-my-zsh"
 plugins=(
@@ -18,7 +20,7 @@ plugins=(
   fzf # fuzzy search every thing https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/fzf
   # autojump # cd familiar dir https://github.com/wting/autojump
 )
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
 
 export VISUAL="nvim"
 export EDITOR="code"
@@ -59,5 +61,5 @@ vol() {
 }
 
 source $ZSH/oh-my-zsh.sh
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
