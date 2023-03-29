@@ -4,5 +4,11 @@
     "cSpell.words": ["dotbot"],
     "markdown.updateLinksOnFileMove.enabled": "always",
     "markdown.validate.enabled": true,
-    "pasteImage.showFilePathConfirmInputBox": false
+    "pasteImage.showFilePathConfirmInputBox": false,
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/*.code-search": true,
+        "**/dotbot": false
+    }
 }
