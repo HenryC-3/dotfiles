@@ -6,8 +6,6 @@
 # 👀 zoxide replacement of cd/autojump commands
 eval "$(zoxide init zsh)" # https://github.com/ajeetdsouza/zoxide#step-2-add-zoxide-to-your-shell
 # 👀 navi shell widget 
-eval "$(navi widget zsh)" # https://github.com/denisidoro/navi/blob/master/docs/installation.md#installing-the-shell-widget
-# starship theme
 eval "$(starship init zsh)" # [starship/starship: ☄🌌️ The minimal, blazing-fast, and infinitely customizable prompt for any shell!](https://github.com/starship/starship#step-2-setup-your-shell-to-use-starship)
 
 export ZSH="/Users/henry/.oh-my-zsh"

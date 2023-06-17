@@ -33,10 +33,10 @@ yabai -m config window_animation_duration    0
 yabai -m config window_border                on
 yabai -m config active_window_border_color   0xffcef0cc #pale green
 yabai -m config normal_window_border_color   0xff555555   
-yabai -m config window_border_width          2            
-yabai -m config window_border_radius         12         
-yabai -m config window_border_blur           false           
-yabai -m config window_border_hidpi          false           
+yabai -m config window_border_width          1            
+yabai -m config window_border_radius         8         
+yabai -m config window_border_blur           off           
+yabai -m config window_border_hidpi          off       
 
 
 yabai -m config layout                       bsp
@@ -46,7 +46,7 @@ yabai -m config bottom_padding               0
 yabai -m config left_padding                 0
 yabai -m config right_padding                0
 # gap between apps
-yabai -m config window_gap                   4
+yabai -m config window_gap                   2
 
 # focus window after active space changes https://github.com/koekeishiya/yabai/issues/719#issuecomment-728140216
 yabai -m signal --add event=space_changed action="yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id)"
@@ -112,5 +112,16 @@ yabai -m rule --add app="^(Things)$" space=^5
 # space 6 misc
 yabai -m rule --add app="^(Motrix)$" space=^6
 
+# https://github.com/xiamaz/YabaiIndicator
+yabai -m signal --add event=mission_control_exit action='echo "refresh" | nc -U /tmp/yabai-indicator.socket'
+yabai -m signal --add event=display_added action='echo "refresh" | nc -U /tmp/yabai-indicator.socket'
+yabai -m signal --add event=display_removed action='echo "refresh" | nc -U /tmp/yabai-indicator.socket'
+yabai -m signal --add event=window_created action='echo "refresh windows" | nc -U /tmp/yabai-indicator.socket'
+yabai -m signal --add event=window_destroyed action='echo "refresh windows" | nc -U /tmp/yabai-indicator.socket'
+yabai -m signal --add event=window_focused action='echo "refresh windows" | nc -U /tmp/yabai-indicator.socket'
+yabai -m signal --add event=window_moved action='echo "refresh windows" | nc -U /tmp/yabai-indicator.socket'
+yabai -m signal --add event=window_resized action='echo "refresh windows" | nc -U /tmp/yabai-indicator.socket'
+yabai -m signal --add event=window_minimized action='echo "refresh windows" | nc -U /tmp/yabai-indicator.socket'
+yabai -m signal --add event=window_deminimized action='echo "refresh windows" | nc -U /tmp/yabai-indicator.socket'
 
 echo "yabai configuration loaded.."

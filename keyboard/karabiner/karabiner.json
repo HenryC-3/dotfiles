@@ -1,5 +1,6 @@
 {
     "global": {
+        "ask_for_confirmation_before_quitting": true,
         "check_for_updates_on_startup": true,
         "show_in_menu_bar": true,
         "show_profile_name_in_menu_bar": true,
@@ -24,7 +25,9 @@
                                 "from": {
                                     "key_code": "caps_lock",
                                     "modifiers": {
-                                        "mandatory": ["any"]
+                                        "mandatory": [
+                                            "any"
+                                        ]
                                     }
                                 },
                                 "to": [
@@ -411,6 +414,7 @@
                         "description": "Quick access apps",
                         "manipulators": [
                             {
+                                "conditions": [],
                                 "description": "focus snippet manager",
                                 "from": {
                                     "key_code": "v",
@@ -426,8 +430,7 @@
                                 "to": {
                                     "shell_command": "/usr/local/bin/code '/Users/henry/Library/Mobile Documents/com~apple~CloudDocs/Snippets'"
                                 },
-                                "type": "basic",
-                                "conditions": []
+                                "type": "basic"
                             }
                         ]
                     },
@@ -439,7 +442,9 @@
                                 "from": {
                                     "key_code": "right_command",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
                                 "to": [
@@ -509,6 +514,7 @@
                         "description": "Super window management",
                         "manipulators": [
                             {
+                                "conditions": [],
                                 "description": "focusSpace1",
                                 "from": {
                                     "key_code": "1",
@@ -522,12 +528,12 @@
                                     }
                                 },
                                 "to": {
-                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/focusSpace1.mjs"
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfiles/window-manager/scripts/workflows/focusSpace1.mjs"
                                 },
-                                "type": "basic",
-                                "conditions": []
+                                "type": "basic"
                             },
                             {
+                                "conditions": [],
                                 "description": "focusSpace2",
                                 "from": {
                                     "key_code": "2",
@@ -541,12 +547,12 @@
                                     }
                                 },
                                 "to": {
-                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/focusSpace2.mjs"
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfiles/window-manager/scripts/workflows/focusSpace2.mjs"
                                 },
-                                "type": "basic",
-                                "conditions": []
+                                "type": "basic"
                             },
                             {
+                                "conditions": [],
                                 "description": "focusSpace3",
                                 "from": {
                                     "key_code": "3",
@@ -560,12 +566,12 @@
                                     }
                                 },
                                 "to": {
-                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/focusSpace3.mjs"
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfiles/window-manager/scripts/workflows/focusSpace3.mjs"
                                 },
-                                "type": "basic",
-                                "conditions": []
+                                "type": "basic"
                             },
                             {
+                                "conditions": [],
                                 "description": "focusSpace4",
                                 "from": {
                                     "key_code": "4",
@@ -579,12 +585,12 @@
                                     }
                                 },
                                 "to": {
-                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/focusSpace4.mjs"
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfiles/window-manager/scripts/workflows/focusSpace4.mjs"
                                 },
-                                "type": "basic",
-                                "conditions": []
+                                "type": "basic"
                             },
                             {
+                                "conditions": [],
                                 "description": "focusSpace5",
                                 "from": {
                                     "key_code": "5",
@@ -598,12 +604,12 @@
                                     }
                                 },
                                 "to": {
-                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/focusSpace5.mjs"
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfiles/window-manager/scripts/workflows/focusSpace5.mjs"
                                 },
-                                "type": "basic",
-                                "conditions": []
+                                "type": "basic"
                             },
                             {
+                                "conditions": [],
                                 "description": "focusSpace6",
                                 "from": {
                                     "key_code": "6",
@@ -617,12 +623,12 @@
                                     }
                                 },
                                 "to": {
-                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/focusSpace6.mjs"
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfiles/window-manager/scripts/workflows/focusSpace6.mjs"
                                 },
-                                "type": "basic",
-                                "conditions": []
+                                "type": "basic"
                             },
                             {
+                                "conditions": [],
                                 "description": "focusSpaceRecent",
                                 "from": {
                                     "key_code": "tab",
@@ -636,12 +642,12 @@
                                     }
                                 },
                                 "to": {
-                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/focusSpaceRecent.mjs"
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfiles/window-manager/scripts/workflows/focusSpaceRecent.mjs"
                                 },
-                                "type": "basic",
-                                "conditions": []
+                                "type": "basic"
                             },
                             {
+                                "conditions": [],
                                 "description": "focusWindowFirst",
                                 "from": {
                                     "key_code": "l",
@@ -655,12 +661,12 @@
                                     }
                                 },
                                 "to": {
-                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/focusWindowFirst.mjs"
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfiles/window-manager/scripts/workflows/focusWindowFirst.mjs"
                                 },
-                                "type": "basic",
-                                "conditions": []
+                                "type": "basic"
                             },
                             {
+                                "conditions": [],
                                 "description": "focusWindowCounterClockwise",
                                 "from": {
                                     "key_code": "j",
@@ -674,12 +680,12 @@
                                     }
                                 },
                                 "to": {
-                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/focusWindowCounterClockwise.mjs"
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfiles/window-manager/scripts/workflows/focusWindowCounterClockwise.mjs"
                                 },
-                                "type": "basic",
-                                "conditions": []
+                                "type": "basic"
                             },
                             {
+                                "conditions": [],
                                 "description": "focusWindowClockwise",
                                 "from": {
                                     "key_code": "k",
@@ -693,12 +699,12 @@
                                     }
                                 },
                                 "to": {
-                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/focusWindowClockwise.mjs"
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfiles/window-manager/scripts/workflows/focusWindowClockwise.mjs"
                                 },
-                                "type": "basic",
-                                "conditions": []
+                                "type": "basic"
                             },
                             {
+                                "conditions": [],
                                 "description": "moveWindowToSpace1",
                                 "from": {
                                     "key_code": "1",
@@ -713,12 +719,12 @@
                                     }
                                 },
                                 "to": {
-                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/moveWindowToSpace1.mjs"
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfiles/window-manager/scripts/workflows/moveWindowToSpace1.mjs"
                                 },
-                                "type": "basic",
-                                "conditions": []
+                                "type": "basic"
                             },
                             {
+                                "conditions": [],
                                 "description": "moveWindowToSpace2",
                                 "from": {
                                     "key_code": "2",
@@ -733,12 +739,12 @@
                                     }
                                 },
                                 "to": {
-                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/moveWindowToSpace2.mjs"
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfiles/window-manager/scripts/workflows/moveWindowToSpace2.mjs"
                                 },
-                                "type": "basic",
-                                "conditions": []
+                                "type": "basic"
                             },
                             {
+                                "conditions": [],
                                 "description": "moveWindowToSpace3",
                                 "from": {
                                     "key_code": "3",
@@ -753,12 +759,12 @@
                                     }
                                 },
                                 "to": {
-                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/moveWindowToSpace3.mjs"
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfiles/window-manager/scripts/workflows/moveWindowToSpace3.mjs"
                                 },
-                                "type": "basic",
-                                "conditions": []
+                                "type": "basic"
                             },
                             {
+                                "conditions": [],
                                 "description": "moveWindowToSpace4",
                                 "from": {
                                     "key_code": "4",
@@ -773,12 +779,12 @@
                                     }
                                 },
                                 "to": {
-                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/moveWindowToSpace4.mjs"
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfiles/window-manager/scripts/workflows/moveWindowToSpace4.mjs"
                                 },
-                                "type": "basic",
-                                "conditions": []
+                                "type": "basic"
                             },
                             {
+                                "conditions": [],
                                 "description": "moveWindowToSpace6",
                                 "from": {
                                     "key_code": "6",
@@ -793,12 +799,12 @@
                                     }
                                 },
                                 "to": {
-                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/moveWindowToSpace6.mjs"
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfiles/window-manager/scripts/workflows/moveWindowToSpace6.mjs"
                                 },
-                                "type": "basic",
-                                "conditions": []
+                                "type": "basic"
                             },
                             {
+                                "conditions": [],
                                 "description": "moveWindowToSpace5",
                                 "from": {
                                     "key_code": "5",
@@ -813,12 +819,12 @@
                                     }
                                 },
                                 "to": {
-                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/moveWindowToSpace5.mjs"
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfiles/window-manager/scripts/workflows/moveWindowToSpace5.mjs"
                                 },
-                                "type": "basic",
-                                "conditions": []
+                                "type": "basic"
                             },
                             {
+                                "conditions": [],
                                 "description": "swapWindowVertical",
                                 "from": {
                                     "key_code": "j",
@@ -833,12 +839,12 @@
                                     }
                                 },
                                 "to": {
-                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/swapWindowVertical.mjs"
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfiles/window-manager/scripts/workflows/swapWindowVertical.mjs"
                                 },
-                                "type": "basic",
-                                "conditions": []
+                                "type": "basic"
                             },
                             {
+                                "conditions": [],
                                 "description": "swapWindowHorizontal",
                                 "from": {
                                     "key_code": "k",
@@ -853,12 +859,12 @@
                                     }
                                 },
                                 "to": {
-                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/swapWindowHorizontal.mjs"
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfiles/window-manager/scripts/workflows/swapWindowHorizontal.mjs"
                                 },
-                                "type": "basic",
-                                "conditions": []
+                                "type": "basic"
                             },
                             {
+                                "conditions": [],
                                 "description": "toggleLayoutType",
                                 "from": {
                                     "key_code": "tab",
@@ -873,12 +879,12 @@
                                     }
                                 },
                                 "to": {
-                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/toggleLayoutType.mjs"
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfiles/window-manager/scripts/workflows/toggleLayoutType.mjs"
                                 },
-                                "type": "basic",
-                                "conditions": []
+                                "type": "basic"
                             },
                             {
+                                "conditions": [],
                                 "description": "decreaseWindowHeight",
                                 "from": {
                                     "key_code": "n",
@@ -893,12 +899,12 @@
                                     }
                                 },
                                 "to": {
-                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/decreaseWindowHeight.mjs"
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfiles/window-manager/scripts/workflows/decreaseWindowHeight.mjs"
                                 },
-                                "type": "basic",
-                                "conditions": []
+                                "type": "basic"
                             },
                             {
+                                "conditions": [],
                                 "description": "decreaseWindowWidth",
                                 "from": {
                                     "key_code": "m",
@@ -913,12 +919,12 @@
                                     }
                                 },
                                 "to": {
-                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/decreaseWindowWidth.mjs"
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfiles/window-manager/scripts/workflows/decreaseWindowWidth.mjs"
                                 },
-                                "type": "basic",
-                                "conditions": []
+                                "type": "basic"
                             },
                             {
+                                "conditions": [],
                                 "description": "increaseWindowHeight",
                                 "from": {
                                     "key_code": "j",
@@ -933,12 +939,12 @@
                                     }
                                 },
                                 "to": {
-                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/increaseWindowHeight.mjs"
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfiles/window-manager/scripts/workflows/increaseWindowHeight.mjs"
                                 },
-                                "type": "basic",
-                                "conditions": []
+                                "type": "basic"
                             },
                             {
+                                "conditions": [],
                                 "description": "increaseWindowWidth",
                                 "from": {
                                     "key_code": "k",
@@ -953,10 +959,9 @@
                                     }
                                 },
                                 "to": {
-                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfile/window-manager/scripts/workflows/increaseWindowWidth.mjs"
+                                    "shell_command": "/Users/henry/.volta/bin/zx /Users/henry/HH-workspace/dotfiles/window-manager/scripts/workflows/increaseWindowWidth.mjs"
                                 },
-                                "type": "basic",
-                                "conditions": []
+                                "type": "basic"
                             }
                         ]
                     },
@@ -991,7 +996,9 @@
                                 "from": {
                                     "key_code": "right_shift",
                                     "modifiers": {
-                                        "optional": ["caps_lock"]
+                                        "optional": [
+                                            "caps_lock"
+                                        ]
                                     }
                                 },
                                 "parameters": {
@@ -1027,7 +1034,9 @@
                                 "from": {
                                     "key_code": "spacebar",
                                     "modifiers": {
-                                        "mandatory": ["left_shift"]
+                                        "mandatory": [
+                                            "left_shift"
+                                        ]
                                     }
                                 },
                                 "to": [
@@ -1068,7 +1077,9 @@
                                 },
                                 "to": {
                                     "key_code": "delete_or_backspace",
-                                    "modifiers": ["left_option"]
+                                    "modifiers": [
+                                        "left_option"
+                                    ]
                                 },
                                 "type": "basic"
                             },
@@ -1089,7 +1100,9 @@
                                 },
                                 "to": {
                                     "key_code": "delete_forward",
-                                    "modifiers": ["left_option"]
+                                    "modifiers": [
+                                        "left_option"
+                                    ]
                                 },
                                 "type": "basic"
                             },
@@ -1110,7 +1123,9 @@
                                 },
                                 "to": {
                                     "key_code": "delete_or_backspace",
-                                    "modifiers": ["left_command"]
+                                    "modifiers": [
+                                        "left_command"
+                                    ]
                                 },
                                 "type": "basic"
                             },
@@ -1131,7 +1146,9 @@
                                 },
                                 "to": {
                                     "key_code": "delete_forward",
-                                    "modifiers": ["left_command"]
+                                    "modifiers": [
+                                        "left_command"
+                                    ]
                                 },
                                 "type": "basic"
                             },
@@ -1196,7 +1213,9 @@
                                 },
                                 "to": {
                                     "key_code": "left_arrow",
-                                    "modifiers": ["left_option"]
+                                    "modifiers": [
+                                        "left_option"
+                                    ]
                                 },
                                 "type": "basic"
                             },
@@ -1216,7 +1235,9 @@
                                 },
                                 "to": {
                                     "key_code": "right_arrow",
-                                    "modifiers": ["left_option"]
+                                    "modifiers": [
+                                        "left_option"
+                                    ]
                                 },
                                 "type": "basic"
                             },
@@ -1236,7 +1257,9 @@
                                 },
                                 "to": {
                                     "key_code": "left_arrow",
-                                    "modifiers": ["left_command"]
+                                    "modifiers": [
+                                        "left_command"
+                                    ]
                                 },
                                 "type": "basic"
                             },
@@ -1256,7 +1279,9 @@
                                 },
                                 "to": {
                                     "key_code": "right_arrow",
-                                    "modifiers": ["left_command"]
+                                    "modifiers": [
+                                        "left_command"
+                                    ]
                                 },
                                 "type": "basic"
                             },
@@ -1352,7 +1377,9 @@
                                 },
                                 "to": {
                                     "key_code": "up_arrow",
-                                    "modifiers": ["left_command"]
+                                    "modifiers": [
+                                        "left_command"
+                                    ]
                                 },
                                 "type": "basic"
                             },
@@ -1372,7 +1399,9 @@
                                 },
                                 "to": {
                                     "key_code": "down_arrow",
-                                    "modifiers": ["left_command"]
+                                    "modifiers": [
+                                        "left_command"
+                                    ]
                                 },
                                 "type": "basic"
                             }
@@ -1398,7 +1427,10 @@
                                 },
                                 "to": {
                                     "key_code": "left_arrow",
-                                    "modifiers": ["left_shift", "left_option"]
+                                    "modifiers": [
+                                        "left_shift",
+                                        "left_option"
+                                    ]
                                 },
                                 "type": "basic"
                             },
@@ -1419,7 +1451,10 @@
                                 },
                                 "to": {
                                     "key_code": "right_arrow",
-                                    "modifiers": ["left_shift", "left_option"]
+                                    "modifiers": [
+                                        "left_shift",
+                                        "left_option"
+                                    ]
                                 },
                                 "type": "basic"
                             },
@@ -1440,7 +1475,10 @@
                                 },
                                 "to": {
                                     "key_code": "left_arrow",
-                                    "modifiers": ["left_command", "left_shift"]
+                                    "modifiers": [
+                                        "left_command",
+                                        "left_shift"
+                                    ]
                                 },
                                 "type": "basic"
                             },
@@ -1461,7 +1499,10 @@
                                 },
                                 "to": {
                                     "key_code": "right_arrow",
-                                    "modifiers": ["left_command", "left_shift"]
+                                    "modifiers": [
+                                        "left_command",
+                                        "left_shift"
+                                    ]
                                 },
                                 "type": "basic"
                             },
@@ -1482,7 +1523,9 @@
                                 },
                                 "to": {
                                     "key_code": "left_arrow",
-                                    "modifiers": ["left_shift"]
+                                    "modifiers": [
+                                        "left_shift"
+                                    ]
                                 },
                                 "type": "basic"
                             },
@@ -1503,7 +1546,9 @@
                                 },
                                 "to": {
                                     "key_code": "right_arrow",
-                                    "modifiers": ["left_shift"]
+                                    "modifiers": [
+                                        "left_shift"
+                                    ]
                                 },
                                 "type": "basic"
                             },
@@ -1524,7 +1569,9 @@
                                 },
                                 "to": {
                                     "key_code": "up_arrow",
-                                    "modifiers": ["left_shift"]
+                                    "modifiers": [
+                                        "left_shift"
+                                    ]
                                 },
                                 "type": "basic"
                             },
@@ -1545,7 +1592,9 @@
                                 },
                                 "to": {
                                     "key_code": "down_arrow",
-                                    "modifiers": ["left_shift"]
+                                    "modifiers": [
+                                        "left_shift"
+                                    ]
                                 },
                                 "type": "basic"
                             },
@@ -1566,7 +1615,10 @@
                                 },
                                 "to": {
                                     "key_code": "up_arrow",
-                                    "modifiers": ["left_command", "left_shift"]
+                                    "modifiers": [
+                                        "left_command",
+                                        "left_shift"
+                                    ]
                                 },
                                 "type": "basic"
                             },
@@ -1587,7 +1639,10 @@
                                 },
                                 "to": {
                                     "key_code": "down_arrow",
-                                    "modifiers": ["left_command", "left_shift"]
+                                    "modifiers": [
+                                        "left_command",
+                                        "left_shift"
+                                    ]
                                 },
                                 "type": "basic"
                             }
@@ -1634,6 +1689,16 @@
                         },
                         {
                             "from": {
+                                "key_code": "left_command"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "left_option"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
                                 "key_code": "left_control"
                             },
                             "to": [
@@ -1671,16 +1736,6 @@
                                     "key_code": "right_command"
                                 }
                             ]
-                        },
-                        {
-                            "from": {
-                                "key_code": "left_command"
-                            },
-                            "to": [
-                                {
-                                    "key_code": "left_option"
-                                }
-                            ]
                         }
                     ],
                     "treat_as_built_in_keyboard": false
@@ -1696,6 +1751,69 @@
                     },
                     "ignore": true,
                     "manipulate_caps_lock_led": false,
+                    "simple_modifications": [],
+                    "treat_as_built_in_keyboard": false
+                },
+                {
+                    "disable_built_in_keyboard_if_exists": false,
+                    "fn_function_keys": [],
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": false,
+                        "product_id": 833,
+                        "vendor_id": 1452
+                    },
+                    "ignore": false,
+                    "manipulate_caps_lock_led": true,
+                    "simple_modifications": [
+                        {
+                            "from": {
+                                "key_code": "caps_lock"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "left_control"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "left_control"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "caps_lock"
+                                }
+                            ]
+                        }
+                    ],
+                    "treat_as_built_in_keyboard": false
+                },
+                {
+                    "disable_built_in_keyboard_if_exists": false,
+                    "fn_function_keys": [],
+                    "identifiers": {
+                        "is_keyboard": false,
+                        "is_pointing_device": true,
+                        "product_id": 833,
+                        "vendor_id": 1452
+                    },
+                    "ignore": true,
+                    "manipulate_caps_lock_led": false,
+                    "simple_modifications": [],
+                    "treat_as_built_in_keyboard": false
+                },
+                {
+                    "disable_built_in_keyboard_if_exists": false,
+                    "fn_function_keys": [],
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": false,
+                        "product_id": 34304,
+                        "vendor_id": 1452
+                    },
+                    "ignore": false,
+                    "manipulate_caps_lock_led": true,
                     "simple_modifications": [],
                     "treat_as_built_in_keyboard": false
                 }
