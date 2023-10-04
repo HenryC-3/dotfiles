@@ -4,7 +4,7 @@
 	process = git-lfs filter-process
 	required = true
 [user]
-	name = HenryC-3
+	name = Henry
 	email = 2324375439@qq.com
 [core]
 	excludesfile = /Users/henry/.gitignore_global

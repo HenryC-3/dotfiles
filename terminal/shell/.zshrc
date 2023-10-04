@@ -32,6 +32,7 @@ export PATH="/usr/local/opt/maven/bin:$PATH" # maven
 export HOMEBREW_NO_AUTO_UPDATE=1 # disable homebrew autoupdate when running `brew` command for saving time
 export HOMEBREW_FORCE_BREWED_CURL=1 # fix progress bar https://github.com/Homebrew/brew/issues/5563#issuecomment-457789500 
 export ROOT_SUPER_PROJECT=/Users/henry/HH-workspace
+export ELECTRON_MIRROR="https://npmmirror.com/mirrors/electron/" # speed up electron downloading process * https://www.electronjs.org/docs/latest/tutorial/installation#custom-mirrors-and-caches
 
 
 # https://npmmirror.com/

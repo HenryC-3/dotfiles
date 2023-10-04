@@ -111,6 +111,8 @@ yabai -m rule --add title="(~/HH-workspace/dotfile - vscode)" space=^2
 yabai -m rule --add app="^(Things)$" space=^5
 # space 6 misc
 yabai -m rule --add app="^(Motrix)$" space=^6
+# space 7 external display for debug electron
+yabai -m rule --add app="^(Electron)$" space=^7
 
 # https://github.com/xiamaz/YabaiIndicator
 yabai -m signal --add event=mission_control_exit action='echo "refresh" | nc -U /tmp/yabai-indicator.socket'
