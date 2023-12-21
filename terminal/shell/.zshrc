@@ -29,6 +29,7 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 export PATH=$HOME/miniconda3/bin:$PATH # miniconda3
 export PATH="/usr/local/opt/openjdk/bin:$PATH" # openjdk
 export PATH="/usr/local/opt/maven/bin:$PATH" # maven
+export PATH="/Users/henry/.platformio/penv/bin:$PATH" # platformio
 export HOMEBREW_NO_AUTO_UPDATE=1 # disable homebrew autoupdate when running `brew` command for saving time
 export HOMEBREW_FORCE_BREWED_CURL=1 # fix progress bar https://github.com/Homebrew/brew/issues/5563#issuecomment-457789500 
 export ROOT_SUPER_PROJECT=/Users/henry/HH-workspace

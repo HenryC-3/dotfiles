@@ -1,4 +1,5 @@
 .personalInfo.json
+.DS_Store
 keyboard/karabiner/automatic_backups
 node_modules
 /keyboard/karabiner/scripts/dist
